@@ -1,9 +1,10 @@
-Feature: Busca pela home page 
+Feature: Pesquisa pela lupa
 
-@Busca_de_produto
+@Pesquisa_pela_Lupa
 Scenario: Busca com Sucesso na Home Page 
 	Given Estou na pagina inicial do advantagedemo 
-	When Eu escolher 
-	And clicar em algum produto 
+	When clicar na lupa 
+	And digitar o produto desejado
+	And escolher o produto
 	Then O produto devera ser adicionado no carrinho 
 	And A mensagem de adcionado ao carrinho com sucesso aparecera
