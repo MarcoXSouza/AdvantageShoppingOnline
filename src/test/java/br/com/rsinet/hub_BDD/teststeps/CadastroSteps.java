@@ -21,13 +21,14 @@ public class CadastroSteps {
 	public void clicar_em_novo_registro() throws Throwable {
 		CadastroPage cadastro = new CadastroPage(driver);
 		cadastro.linkCadastro();
+		Thread.sleep(2000);
+		cadastro.criarConta();
 	}
 
 	@When("^Usuario preenche cadastro$")
-	public void Usuario_preenche_cadastro(String nome, String pais, String email, String senha, String telefone,
-			String cidade, String endereco, String estado, String cep, String ultimoNome) {
+	public void Usuario_preenche_cadastro() throws Exception {
 		CadastroPage cadastro = new CadastroPage(driver);
-		cadastro.preencheCadastro(nome, pais, email, senha, telefone, cidade, endereco, estado, cep, ultimoNome);
+		cadastro.preencheCadastro();
 
 	}
 

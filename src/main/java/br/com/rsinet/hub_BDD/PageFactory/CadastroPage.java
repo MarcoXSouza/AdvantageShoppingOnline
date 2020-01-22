@@ -1,10 +1,17 @@
 package br.com.rsinet.hub_BDD.PageFactory;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import br.com.rsinet.hub_BDD.utilitys.Constantes;
+import br.com.rsinet.hub_BDD.utilitys.ExcelData;
+import br.com.rsinet.hub_BDD.utilitys.ExcelUtils;
 
 public class CadastroPage {
 	public static WebDriver driver;
@@ -15,6 +22,9 @@ public class CadastroPage {
 
 	@FindBy(how = How.ID, using = "menuUser")
 	private WebElement LINKCADASTRO;
+	
+	@FindBy(how = How.XPATH, using = "/html/body/login-modal/div/div/div[3]/a[2]")
+	private WebElement CRIARCONTA;
 
 	@FindBy(how = How.NAME, using = "countryListboxRegisterPage")
 	private WebElement PAIS;
@@ -62,22 +72,6 @@ public class CadastroPage {
 		LINKCADASTRO.click();
 	}
 
-	public void preencheCadastro(String nome, String pais, String email, String senha,
-			String telefone, String cidade, String endereco, String estado, String cep,
-			String ultimoNome) {
-		NOME.sendKeys(nome);
-		PAIS.sendKeys(pais);
-		EMAIL.sendKeys(email);
-		SENHA.sendKeys(senha);
-		CONFIRMARSENHA.sendKeys(senha);
-		PRIMEIRONOME.sendKeys(nome);
-		ULTIMONOME.sendKeys(ultimoNome);
-		TELEFONE.sendKeys(telefone);
-		CIDADE.sendKeys(cidade);
-		ENDERECO.sendKeys(endereco);
-		ESTADO.sendKeys(estado);
-		CEP.sendKeys(cep);
-	}
 
 	public void aceitarTermos() {
 		ACEITARTERMOS.click();
@@ -87,4 +81,30 @@ public class CadastroPage {
 		BTNREGISTRAR.click();
 	}
 
+	public void criarConta() {
+		CRIARCONTA.sendKeys(Keys.ENTER);
+	}
+	public void preencheCadastro() throws Exception {
+		ExcelUtils.setExcelFile(Constantes.path + Constantes.file ,"Cadastro" );
+		NOME.sendKeys(ExcelData.nome);
+		PAIS.sendKeys(ExcelData.pais);
+		EMAIL.sendKeys(ExcelData.email);
+		SENHA.sendKeys(ExcelData.senha);
+		CONFIRMARSENHA.sendKeys(ExcelData.senha);
+		PRIMEIRONOME.sendKeys(ExcelData.nome);
+		ULTIMONOME.sendKeys(ExcelData.ultimoNome);
+		TELEFONE.sendKeys(ExcelData.telefone);
+		CIDADE.sendKeys(ExcelData.cidade);
+		ENDERECO.sendKeys(ExcelData.endereco);
+		ESTADO.sendKeys(ExcelData.estado);
+		CEP.sendKeys(ExcelData.cep);
+	}
+//	public void criarConta() {
+//		WebDriverWait wait = new WebDriverWait(driver, 15);
+//		WebElement waitElement = wait
+//				.until(ExpectedConditions.elementToBeClickable(CRIARCONTA));
+//		waitElement.sendKeys(Keys.ENTER);
+//	}
+
 }
+
