@@ -8,10 +8,10 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "C:\\Users\\marcos.souza\\Documents\\ProjetoBDD\\workspace\\ProjetoBDD\\features\\Cadastro.feature",
-		glue = "br.com.rsinet.hub_BDD.PageFactory",
+		glue = "br.com.rsinet.hub_BDD.teststeps",
 		monochrome = true,
 		dryRun = false,
-		tags = {"@Cadastro_de_novo_usuario\r\n"}
+		tags = {"@Cadastro_de_novo_usuario"}
 		)
 public class CadastroRunner {
 

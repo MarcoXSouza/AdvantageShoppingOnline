@@ -7,9 +7,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class BuscaPage {
-	public BuscaPage(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+	public BuscaPage(WebDriver driver){
+		PageFactory.initElements(driver, BuscaPage.class);
 	}
+	
 
 	@FindBy(how = How.ID, using = "laptopsImg")
 	private WebElement LAPTOP;
@@ -23,7 +24,7 @@ public class BuscaPage {
 	@FindBy(how = How.ID, using = "checkOutPopUp")
 	private WebElement FAZCHECKOUT;
 
-	public void laptop() {
+	public void escolheLaptop() {
 		LAPTOP.click();
 	}
 

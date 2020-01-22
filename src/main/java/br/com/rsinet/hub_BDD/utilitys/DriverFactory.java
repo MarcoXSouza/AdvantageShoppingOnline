@@ -16,7 +16,7 @@ public class DriverFactory {
 		if (driver == null) {
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//			driver.manage().window().maximize();
+			driver.manage().window().maximize();
 			driver.get("https://www.advantageonlineshopping.com/#/");
 
 		}

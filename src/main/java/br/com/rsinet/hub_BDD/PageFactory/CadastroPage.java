@@ -6,10 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import gherkin.lexer.Uk;
-
 public class CadastroPage {
 	public static WebDriver driver;
+
 	public CadastroPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -63,51 +62,20 @@ public class CadastroPage {
 		LINKCADASTRO.click();
 	}
 
-	public void nome(String nome) {
+	public void preencheCadastro(String nome, String pais, String email, String senha,
+			String telefone, String cidade, String endereco, String estado, String cep,
+			String ultimoNome) {
 		NOME.sendKeys(nome);
-	}
-
-	public void pais(String pais) {
 		PAIS.sendKeys(pais);
-	}
-
-	public void email(String email) {
 		EMAIL.sendKeys(email);
-	}
-
-	public void senha(String senha) {
 		SENHA.sendKeys(senha);
-	}
-
-	public void confirmaSenha(String senha) {
 		CONFIRMARSENHA.sendKeys(senha);
-	}
-
-	public void primeiroNome(String nome) {
 		PRIMEIRONOME.sendKeys(nome);
-	}
-
-	public void ultimoNome(String ultimoNome) {
 		ULTIMONOME.sendKeys(ultimoNome);
-	}
-
-	public void telefone(String telefone) {
 		TELEFONE.sendKeys(telefone);
-	}
-
-	public void cidade(String cidade) {
 		CIDADE.sendKeys(cidade);
-	}
-
-	public void endereco(String endereco) {
 		ENDERECO.sendKeys(endereco);
-	}
-
-	public void estado(String estado) {
 		ESTADO.sendKeys(estado);
-	}
-
-	public void cep(String cep) {
 		CEP.sendKeys(cep);
 	}
 

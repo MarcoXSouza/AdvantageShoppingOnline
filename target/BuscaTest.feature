@@ -22,7 +22,7 @@ Feature: Busca pela home page
 
   @tag1
  Scenario: Busca com Sucesso na Home Page 
-	Given Estou na pagina inicial do advantagedemo 
+	Given Estou na pagina inicial do advantagedemoa 
 	When Eu escolher 
 	And clicar em algum produto 
 	Then O produto devera ser adicionado no carrinho 
