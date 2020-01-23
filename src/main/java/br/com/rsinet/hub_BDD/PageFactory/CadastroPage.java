@@ -1,13 +1,10 @@
 package br.com.rsinet.hub_BDD.PageFactory;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub_BDD.utilitys.Constantes;
 import br.com.rsinet.hub_BDD.utilitys.ExcelData;
@@ -19,12 +16,6 @@ public class CadastroPage {
 	public CadastroPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-
-	@FindBy(how = How.ID, using = "menuUser")
-	private WebElement LINKCADASTRO;
-	
-	@FindBy(how = How.XPATH, using = "/html/body/login-modal/div/div/div[3]/a[2]")
-	private WebElement CRIARCONTA;
 
 	@FindBy(how = How.NAME, using = "countryListboxRegisterPage")
 	private WebElement PAIS;
@@ -68,11 +59,6 @@ public class CadastroPage {
 	@FindBy(how = How.ID, using = "register_btnundefined")
 	private WebElement BTNREGISTRAR;
 
-	public void linkCadastro() {
-		LINKCADASTRO.click();
-	}
-
-
 	public void aceitarTermos() {
 		ACEITARTERMOS.click();
 	}
@@ -81,11 +67,8 @@ public class CadastroPage {
 		BTNREGISTRAR.click();
 	}
 
-	public void criarConta() {
-		CRIARCONTA.sendKeys(Keys.ENTER);
-	}
 	public void preencheCadastro() throws Exception {
-		ExcelUtils.setExcelFile(Constantes.path + Constantes.file ,"Cadastro" );
+		ExcelUtils.setExcelFile(Constantes.path, "Cadastro");
 		NOME.sendKeys(ExcelData.nome);
 		PAIS.sendKeys(ExcelData.pais);
 		EMAIL.sendKeys(ExcelData.email);
@@ -99,12 +82,5 @@ public class CadastroPage {
 		ESTADO.sendKeys(ExcelData.estado);
 		CEP.sendKeys(ExcelData.cep);
 	}
-//	public void criarConta() {
-//		WebDriverWait wait = new WebDriverWait(driver, 15);
-//		WebElement waitElement = wait
-//				.until(ExpectedConditions.elementToBeClickable(CRIARCONTA));
-//		waitElement.sendKeys(Keys.ENTER);
-//	}
 
 }
-

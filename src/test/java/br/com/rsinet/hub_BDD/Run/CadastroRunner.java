@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "C:\\Users\\marcos.souza\\Documents\\ProjetoBDD\\workspace\\ProjetoBDD\\features\\Cadastro.feature",
+		features = "features\\Cadastro.feature",
 		glue = "br.com.rsinet.hub_BDD.teststeps",
 		monochrome = true,
 		tags = {"@Cadastro_de_novo_usuario"}

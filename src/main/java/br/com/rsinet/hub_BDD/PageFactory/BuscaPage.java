@@ -11,9 +11,6 @@ public class BuscaPage {
 		PageFactory.initElements(driver, BuscaPage.class);
 	}
 
-	@FindBy(how = How.ID, using = "laptopsImg")
-	private WebElement LAPTOP;
-
 	@FindBy(how = How.LINK_TEXT, using = "HP Chromebook 14 G1(ES)")
 	private WebElement CLICALAPTOP;
 
@@ -25,10 +22,6 @@ public class BuscaPage {
 
 	@FindBy(how = How.NAME, using = "quantity")
 	private WebElement QUANTIDADE;
-
-	public void escolheLaptop() {
-		LAPTOP.click();
-	}
 
 	public void clicaLaptop() {
 		CLICALAPTOP.click();

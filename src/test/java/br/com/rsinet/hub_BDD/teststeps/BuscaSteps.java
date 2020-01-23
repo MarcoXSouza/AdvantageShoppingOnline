@@ -3,6 +3,7 @@ package br.com.rsinet.hub_BDD.teststeps;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_BDD.PageFactory.BuscaPage;
+import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.utilitys.DriverFactory;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,7 +20,8 @@ public class BuscaSteps {
 	@When("^Eu escolher$")
 	public void Eu_escolher() {
 		BuscaPage busca = new BuscaPage(driver);
-		busca.escolheLaptop();
+		HomePage home = new HomePage(driver);
+		home.escolheItem();;
 		busca.clicaLaptop();
 	}
 

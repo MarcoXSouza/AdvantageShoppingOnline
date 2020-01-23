@@ -2,6 +2,7 @@ package br.com.rsinet.hub_BDD.teststeps;
 
 import org.openqa.selenium.WebDriver;
 
+import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.PageFactory.LupaPage;
 import br.com.rsinet.hub_BDD.utilitys.DriverFactory;
 import cucumber.api.java.en.Given;
@@ -19,14 +20,14 @@ public class LupaSteps {
 
 	@When("^clicar na lupa$")
 	public void clicar_na_lupa() throws Throwable {
-		LupaPage lupa = new LupaPage(driver);
-		lupa.menu();
+		HomePage home = new HomePage(driver);
+		home.menu();
 	}
 
 	@When("^digitar o produto desejado$")
 	public void digitar_o_produto_desejado() throws Throwable {
-		LupaPage lupa = new LupaPage(driver);
-		lupa.digita();
+		HomePage home = new HomePage(driver);
+		home.digita();
 	}
 
 	@When("^escolher o produto$")

@@ -3,6 +3,7 @@ package br.com.rsinet.hub_BDD.teststeps;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_BDD.PageFactory.CadastroPage;
+import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.utilitys.DriverFactory;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,10 +20,10 @@ public class CadastroSteps {
 
 	@When("^clicar em novo registro$")
 	public void clicar_em_novo_registro() throws Throwable {
-		CadastroPage cadastro = new CadastroPage(driver);
-		cadastro.linkCadastro();
+		HomePage home = new HomePage(driver);
+		home.linkCadastro();
 		Thread.sleep(2000);
-		cadastro.criarConta();
+		home.criarConta();
 	}
 
 	@When("^Usuario preenche cadastro$")

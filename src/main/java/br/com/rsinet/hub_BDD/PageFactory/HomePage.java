@@ -24,6 +24,12 @@ public class HomePage {
 
 	@FindBy(how = How.ID, using = "laptopsImg")
 	private WebElement ITEMDOMENU;
+	
+	@FindBy(how = How.ID, using = "menuSearch")
+	private WebElement MENU;
+
+	@FindBy(how = How.ID, using = "autoComplete")
+	private WebElement DIGITA;
 
 	public void Wait() {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
@@ -41,6 +47,14 @@ public class HomePage {
 
 	public void escolheItem() {
 		ITEMDOMENU.click();
+	}
+
+	public void menu() {
+		MENU.click();
+	}
+
+	public void digita() {
+		DIGITA.sendKeys("HP Pavilion 15z Laptop" + Keys.ENTER);
 	}
 
 }
