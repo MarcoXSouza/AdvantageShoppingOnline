@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.teststeps;
 
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
@@ -9,10 +11,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class LupaSucesso {
+public class LupaSteps {
 
 	public static WebDriver driver;
 
+	@Before
 	@Given("^Estou no site advantagedemo na pagina inicial$")
 	public void Estou_no_site_advantagedemo_na_pagina_inicial() throws Throwable {
 		driver = DriverFactory.iniciaNavegador();
@@ -24,6 +27,7 @@ public class LupaSucesso {
 		home.menu();
 	}
 
+	@Test
 	@When("^digitar o produto desejado$")
 	public void digitar_o_produto_desejado() throws Throwable {
 		HomePage home = new HomePage(driver);
@@ -48,5 +52,18 @@ public class LupaSucesso {
 		lupa.fazerCheckOut();
 		DriverFactory.fechaDriver(driver);
 	}
-}
+	
+	@Test
+	@When("^digitar o item que deseja$")
+	public void digitar_o_item_que_deseja() {
+		HomePage home = new HomePage(driver);
+		home.digita();
+	}
 
+	@Then("^A mensagem de item nao encontrado aparecera$")
+	public void A_mensagem_de_item_nao_encontrado_aparecera() {
+		LupaPage lupa = new LupaPage(driver);
+		lupa.produto();
+		DriverFactory.fechaDriver(driver);
+	}
+}

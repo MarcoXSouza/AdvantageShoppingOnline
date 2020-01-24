@@ -1,6 +1,5 @@
 package br.com.rsinet.hub_BDD.teststeps;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_BDD.PageFactory.BuscaPage;
@@ -10,7 +9,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class BuscaSucesso {
+public class BuscaSteps {
 	private WebDriver driver;
 
 	@Given("^Que estou na pagina inicial do advantagedemo$")
@@ -48,6 +47,31 @@ public class BuscaSucesso {
 	public void fecha_o_navegador() {
 		DriverFactory.fechaDriver(driver);
 		
+	}
+	@When("^Eu escolher um item$")
+	public void Eu_escolher_um_item() {
+		BuscaPage busca = new BuscaPage(driver);
+		HomePage home = new HomePage(driver);
+		home.escolheItem();
+		busca.clicaLaptop();
+	}
+
+	@When("^adicionar onze produtos no carrinho$")
+	public void adicionar_onze_produtos_no_carrinho() {
+		BuscaPage busca = new BuscaPage(driver);
+		busca.quantidade();
+	}
+
+	@When("^clicar em algum item$")
+	public void clicar_em_algum_item() {
+		BuscaPage busca = new BuscaPage(driver);
+		busca.adicionaAoCarrinho();
+		busca.fazCheckOut();
+	}
+
+	@Then("^A mensagem limite atingido aparecera$")
+	public void A_mensagem_limite_atingido_aparecera() {
+		DriverFactory.fechaDriver(driver);
 	}
 
 }
