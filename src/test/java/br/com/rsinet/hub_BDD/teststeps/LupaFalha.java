@@ -1,7 +1,9 @@
-package br.com.rsinet.hub_BDD.teststeps.Falha;
+package br.com.rsinet.hub_BDD.teststeps;
 
 import org.openqa.selenium.WebDriver;
 
+import br.com.rsinet.hub_BDD.PageFactory.HomePage;
+import br.com.rsinet.hub_BDD.PageFactory.LupaPage;
 import br.com.rsinet.hub_BDD.utilitys.DriverFactory;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,16 +19,19 @@ public class LupaFalha {
 
 	@When("^clicar na barra de pesquisa$")
 	public void clicar_na_barra_de_pesquisa() {
-
+		HomePage home = new HomePage(driver);
+		home.menu();
 	}
 
 	@When("^digitar o item que deseja$")
 	public void digitar_o_item_que_deseja() {
-
+		HomePage home = new HomePage(driver);
+		home.digita();
 	}
 
 	@Then("^A mensagem de item nao encontrado aparecera$")
 	public void A_mensagem_de_item_nao_encontrado_aparecera() {
-
+		LupaPage lupa = new LupaPage(driver);
+		lupa.produto();
 	}
 }

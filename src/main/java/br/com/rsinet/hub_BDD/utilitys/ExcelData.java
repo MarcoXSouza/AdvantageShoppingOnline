@@ -1,7 +1,6 @@
 package br.com.rsinet.hub_BDD.utilitys;
 
 public class ExcelData {
-
 	public static String nome = ExcelUtils.getCellData(1, 0);
 	public static String email = ExcelUtils.getCellData(1, 2);
 	public static String senha = ExcelUtils.getCellData(1, 8);

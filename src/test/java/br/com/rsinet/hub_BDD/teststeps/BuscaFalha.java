@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.teststeps.Falha;
+package br.com.rsinet.hub_BDD.teststeps;
 
 import org.openqa.selenium.WebDriver;
 
