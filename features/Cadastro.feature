@@ -1,20 +1,22 @@
-@Cadastro_de_novo_usuario 
-Feature: Cadastro de novo usuario 
+# language: pt 
 
-Background: 
-	Given Estou na homepage do advantagedemo 
-	When clicar em novo registro 
+@Cadastro_de_novo_usuario 
+Funcionalidade: Cadastro de novo usuario 
+
+Contexto: 
+	Dado estou na homepage do advantagedemo 
+	Quando clicar em novo registro 
 
 @Cadastro_com_sucesso
-Scenario: Cadastro com sucesso 
-	And Usuario preenche cadastro 
-	And clica em aceitar os termos 
-	And clica em registrar 
-	Then O usuario sera cadastrado no site 
+Cenario: Cadastro com sucesso 
+	E usuario preenche cadastro 
+	E clica em aceitar os termos 
+	E clica em registrar 
+	Entao o usuario sera cadastrado no site 
 	
 @Cadastro_Falha 
-Scenario: Cadastro com falha
-	And Preencher os dados do novo Usuario
-	And Aceitar os termos
-	And Finalizar o cadastro
-	Then Mensagem de usuario ja cadastrado
+Cenario: Cadastro com falha
+	E preencher os dados do novo Usuario
+	E aceitar os termos
+	E finalizar o cadastro
+	Entao mensagem de usuario ja cadastrado

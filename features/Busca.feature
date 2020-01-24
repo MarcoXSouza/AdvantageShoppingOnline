@@ -1,20 +1,22 @@
-@Busca_de_produto 
-Feature: Busca pela home page 
+# language: pt
 
-Background: 
-	Given Que estou na pagina inicial do advantagedemo 
+@Busca_de_produto 
+Funcionalidade: Busca pela home page 
+
+Contexto: 
+	Dado que estou na pagina inicial do advantagedemo 
 	
 @Busca_de_produto_com_sucesso
-Scenario: Busca com Sucesso na Home Page 
-	When Eu escolher 
-	And clicar em algum produto 
-	Then O produto devera ser adicionado ao carrinho 
-	And A mensagem de adcionado ao carrinho aparecera 
+Cenario: Busca com Sucesso na Home Page 
+	Quando eu escolher 
+	E clicar em algum produto 
+	Entao o produto devera ser adicionado ao carrinho 
+	E a mensagem de adcionado ao carrinho aparecera 
 	
 @Falha_Na_Busca
-Scenario: Falha ao comprar mais de dez itens 
-	When Eu escolher um item 
-	And adicionar onze produtos no carrinho 
-	And clicar em algum item 
-	Then A mensagem limite atingido aparecera
-	And fecha o navegador
+Cenario: Falha ao comprar mais de dez itens 
+	Quando eu escolher um item 
+	E adicionar onze produtos no carrinho 
+	E clicar em algum item 
+	Entao a mensagem limite atingido aparecera
+	E fecha o navegador
