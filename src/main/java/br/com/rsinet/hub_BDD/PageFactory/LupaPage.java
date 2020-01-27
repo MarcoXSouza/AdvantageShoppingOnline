@@ -11,7 +11,7 @@ public class LupaPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.LINK_TEXT, using = "HP Pavilion 15z Laptop")
+	@FindBy(how = How.ID, using = "2")
 	private WebElement PRODUTO;
 
 	@FindBy(how = How.NAME, using = "save_to_cart")

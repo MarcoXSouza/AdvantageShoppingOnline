@@ -8,10 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BuscaPage {
 	public BuscaPage(WebDriver driver) {
-		PageFactory.initElements(driver, BuscaPage.class);
+		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.LINK_TEXT, using = "HP Chromebook 14 G1(ENERGY STAR)")
+	@FindBy(how = How.ID, using = "1")
 	private WebElement CLICALAPTOP;
 
 	@FindBy(how = How.NAME, using = "save_to_cart")

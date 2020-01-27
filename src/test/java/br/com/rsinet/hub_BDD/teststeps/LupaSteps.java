@@ -22,7 +22,7 @@ public class LupaSteps {
 	}
 
 	@Quando("^clicar na lupa$")
-	public void clicar_na_lupa() throws Throwable {
+	public void clicar_na_lupa() throws Exception {
 		HomePage home = new HomePage(driver);
 		home.menu();
 	}
@@ -55,7 +55,7 @@ public class LupaSteps {
 	
 	@Test
 	@Quando("^digitar o item que deseja$")
-	public void digitar_o_item_que_deseja() {
+	public void digitar_o_item_que_deseja() throws Exception {
 		HomePage home = new HomePage(driver);
 		home.digita();
 	}

@@ -83,4 +83,9 @@ public class CadastroPage {
 		CEP.sendKeys(ExcelData.cep);
 	}
 
+	public void valida() {
+	}
+	
+	
+	
 }

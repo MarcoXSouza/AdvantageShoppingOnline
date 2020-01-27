@@ -39,15 +39,16 @@ public class BuscaSteps {
 
 	@Entao("^a mensagem de adcionado ao carrinho aparecera$")
 	public void a_mensagem_de_adcionado_ao_carrinho_aparecera() {
-//	boolean mensagem = false;
-//	Assert.assertTrue("", mensagem);
+//		boolean mensagem = false;
+//		Assert.assertTrue("", mensagem);
 	}
-	
+
 	@Entao("^fecha o navegador$")
 	public void fecha_o_navegador() {
 		DriverFactory.fechaDriver(driver);
-		
+
 	}
+
 	@Quando("^eu escolher um item$")
 	public void eu_escolher_um_item() {
 		BuscaPage busca = new BuscaPage(driver);

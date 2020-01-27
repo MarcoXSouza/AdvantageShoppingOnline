@@ -9,6 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.rsinet.hub_BDD.utilitys.Constantes;
+import br.com.rsinet.hub_BDD.utilitys.ExcelData;
+import br.com.rsinet.hub_BDD.utilitys.ExcelUtils;
+
 public class HomePage {
 	public static WebDriver driver;
 
@@ -53,8 +57,9 @@ public class HomePage {
 		MENU.click();
 	}
 
-	public void digita() {
-		DIGITA.sendKeys("HP Pavilion 15z Laptop" + Keys.ENTER);
+	public void digita() throws Exception {
+		ExcelUtils.setExcelFile(Constantes.path, "Lupa");
+		DIGITA.sendKeys(ExcelData.nome + Keys.ENTER);
 	}
 
 }

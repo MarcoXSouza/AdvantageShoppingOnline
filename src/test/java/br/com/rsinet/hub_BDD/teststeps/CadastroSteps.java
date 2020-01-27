@@ -1,7 +1,5 @@
 package br.com.rsinet.hub_BDD.teststeps;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -54,8 +52,10 @@ public class CadastroSteps {
 
 	@Entao("^o usuario sera cadastrado no site$")
 	public void o_usuario_sera_cadastrado_no_site() {
+
+//		Assert.
 		
-		DriverFactory.fechaDriver(driver);
+//		DriverFactory.fechaDriver(driver);
 	}
 
 	@Test
@@ -79,8 +79,8 @@ public class CadastroSteps {
 
 	@Entao("^mensagem de usuario ja cadastrado$")
 	public void mensagem_de_usuario_ja_cadastrado() {
-		String mensagem = "";
-		assertTrue("", mensagem.equals(""));
+		
+		
 		DriverFactory.fechaDriver(driver);
 	}
 
