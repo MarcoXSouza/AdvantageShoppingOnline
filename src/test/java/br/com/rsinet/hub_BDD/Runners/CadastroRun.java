@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		glue = "br.com.rsinet.hub_BDD.teststeps",
 		monochrome = true,
 		dryRun = false,
-		tags = {"@Cadastro_de_novo_usuario"
+		tags = {"@Cadastro_com_sucesso"
 		}
 		)
 
