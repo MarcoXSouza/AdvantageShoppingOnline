@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import br.com.rsinet.hub_BDD.PageFactory.BuscaPage;
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.utilitys.DriverFactory;
+import br.com.rsinet.hub_BDD.utilitys.Snapshot;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
@@ -36,9 +37,10 @@ public class BuscaSteps {
 	}
 
 	@Entao("^o produto devera ser adicionado ao carrinho$")
-	public void o_produto_devera_ser_adicionado_ao_carrinho() {
+	public void o_produto_devera_ser_adicionado_ao_carrinho() throws Exception {
 		BuscaPage comparar = new BuscaPage(driver);
 		comparar.comparaPositivo();
+		Snapshot.takeSnapShot("BuscaSucessoBDD", driver);
 		DriverFactory.fechaDriver(driver);
 	}
 
@@ -63,14 +65,12 @@ public class BuscaSteps {
 	}
 
 	@Entao("^a mensagem limite atingido aparecera$")
-	public void a_mensagem_limite_atingido_aparecera() {
+	public void a_mensagem_limite_atingido_aparecera() throws Exception {
 		BuscaPage compara = new BuscaPage(driver);
 		compara.comparaNegativo();
-	}
-
-	@Entao("^fecha o navegador$")
-	public void fecha_o_navegador() {
+		Snapshot.takeSnapShot("BuscaFalhaBDD", driver);
 		DriverFactory.fechaDriver(driver);
 	}
+
 
 }

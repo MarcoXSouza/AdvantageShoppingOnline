@@ -18,4 +18,4 @@ Cenario: Falha ao comprar mais de dez itens
 	E adicionar onze produtos no carrinho 
 	E clicar em algum item 
 	Entao a mensagem limite atingido aparecera
-	E fecha o navegador
+

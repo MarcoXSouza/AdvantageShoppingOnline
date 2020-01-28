@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.teststeps;
 
+import java.io.IOException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import br.com.rsinet.hub_BDD.PageFactory.CadastroPage;
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.utilitys.DriverFactory;
+import br.com.rsinet.hub_BDD.utilitys.Snapshot;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
@@ -54,9 +57,10 @@ public class CadastroSteps {
 	}
 
 	@Entao("^o usuario sera cadastrado no site$")
-	public void o_usuario_sera_cadastrado_no_site() {
+	public void o_usuario_sera_cadastrado_no_site() throws Exception {
 		CadastroPage validaCadastro = new CadastroPage(driver);
 		validaCadastro.pagInicial();
+		Snapshot.takeSnapShot("Cadastro Sucesso BDD", driver);
 		DriverFactory.fechaDriver(driver);
 	}
 
@@ -81,9 +85,10 @@ public class CadastroSteps {
 	}
 
 	@Entao("^mensagem de usuario ja cadastrado$")
-	public void mensagem_de_usuario_ja_cadastrado() {
+	public void mensagem_de_usuario_ja_cadastrado() throws Exception {
 		CadastroPage validaNome = new CadastroPage(driver);
 		validaNome.nomeInvalido();
+		Snapshot.takeSnapShot("Cadastro Falha BDD", driver);
 		DriverFactory.fechaDriver(driver);
 	}
 
