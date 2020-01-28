@@ -11,7 +11,6 @@ Cenario: Busca com Sucesso na Home Page
 	Quando eu escolher 
 	E clicar em algum produto 
 	Entao o produto devera ser adicionado ao carrinho 
-	E a mensagem de adcionado ao carrinho aparecera 
 	
 @Falha_Na_Busca
 Cenario: Falha ao comprar mais de dez itens 

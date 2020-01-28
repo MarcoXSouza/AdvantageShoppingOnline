@@ -33,8 +33,8 @@ public class CadastroSteps {
 	@Test
 	@Quando("^usuario preenche cadastro$")
 	public void usuario_preenche_cadastro() throws Exception {
-		CadastroPage cadastro = new CadastroPage(driver);
-		cadastro.preencheCadastro();
+		CadastroPage preencher = new CadastroPage(driver);
+		preencher.preencheCadastro();
 
 	}
 

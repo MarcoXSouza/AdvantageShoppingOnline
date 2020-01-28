@@ -49,7 +49,7 @@ public class HomePage {
 		LINKCADASTRO.click();
 	}
 
-	public void escolheItem() {
+	public void escolheCategoria() {
 		ITEMDOMENU.click();
 	}
 
