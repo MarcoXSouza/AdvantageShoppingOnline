@@ -1,5 +1,6 @@
 package br.com.rsinet.hub_BDD.PageFactory;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,8 +18,11 @@ public class LupaPage {
 	@FindBy(how = How.NAME, using = "save_to_cart")
 	private WebElement ADICIONARAOCARRINHO;
 
-	@FindBy(how = How.ID, using = "checkOutPopUp")
-	private WebElement FAZERCHECKOUT;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"shoppingCartLink\"]/span")
+	private WebElement CARRINHO;
+	
+	@FindBy(how = How.ID, using = "searchPage")
+	private WebElement NAOENCONTRADO;
 
 	public void produto() {
 		PRODUTO.click();
@@ -27,8 +31,15 @@ public class LupaPage {
 	public void adicionaAoCarrinho() {
 		ADICIONARAOCARRINHO.click();
 	}
-
-	public void fazerCheckOut() {
-		FAZERCHECKOUT.click();
+	
+	public void verificaCarrinho() {
+		String compararCarrinho = CARRINHO.getText();
+		Assert.assertTrue(compararCarrinho.equals("1"));
 	}
+	
+	public void buscaInvalida() {
+		String naoEncontrada = NAOENCONTRADO.getText();
+		Assert.assertTrue(naoEncontrada.contains("No results for "));
+	}
+	
 }

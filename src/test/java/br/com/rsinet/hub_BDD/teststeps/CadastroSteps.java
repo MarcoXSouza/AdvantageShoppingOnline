@@ -45,17 +45,16 @@ public class CadastroSteps {
 	}
 
 	@Quando("^clica em registrar$")
-	public void clica_em_registrar() {
+	public void clica_em_registrar() throws InterruptedException {
 		CadastroPage cadastro = new CadastroPage(driver);
 		cadastro.btnRegistrar();
+		Thread.sleep(1000);
+		
 	}
 
 	@Entao("^o usuario sera cadastrado no site$")
 	public void o_usuario_sera_cadastrado_no_site() {
 
-//		Assert.
-		
-//		DriverFactory.fechaDriver(driver);
 	}
 
 	@Test
@@ -79,8 +78,7 @@ public class CadastroSteps {
 
 	@Entao("^mensagem de usuario ja cadastrado$")
 	public void mensagem_de_usuario_ja_cadastrado() {
-		
-		
+
 		DriverFactory.fechaDriver(driver);
 	}
 

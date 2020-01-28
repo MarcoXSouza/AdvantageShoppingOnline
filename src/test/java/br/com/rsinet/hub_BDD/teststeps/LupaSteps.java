@@ -30,40 +30,40 @@ public class LupaSteps {
 	@Test
 	@Quando("^digitar o produto desejado$")
 	public void digitar_o_produto_desejado() throws Throwable {
-		HomePage home = new HomePage(driver);
-		home.digita();
+		HomePage homeBarra = new HomePage(driver);
+		homeBarra.digita();
 	}
 
 	@Quando("^escolher o produto$")
 	public void escolher_o_produto() throws Throwable {
-		LupaPage lupa = new LupaPage(driver);
-		lupa.produto();
+		LupaPage escolheProduto = new LupaPage(driver);
+		escolheProduto.produto();
 	}
 
 	@Entao("^o produto devera ser adicionado no carrinho$")
 	public void o_produto_devera_ser_adicionado_no_carrinho() throws Throwable {
-		LupaPage lupa = new LupaPage(driver);
-		lupa.adicionaAoCarrinho();
+		LupaPage carrinho = new LupaPage(driver);
+		carrinho.adicionaAoCarrinho();
 	}
 
 	@Entao("^a mensagem de adcionado ao carrinho com sucesso aparecera$")
 	public void a_mensagem_de_adcionado_ao_carrinho_com_sucesso_aparecera() throws Throwable {
-		LupaPage lupa = new LupaPage(driver);
-		lupa.fazerCheckOut();
+		LupaPage confere = new LupaPage(driver);
+		confere.verificaCarrinho();
 		DriverFactory.fechaDriver(driver);
 	}
-	
+
 	@Test
 	@Quando("^digitar o item que deseja$")
 	public void digitar_o_item_que_deseja() throws Exception {
 		HomePage home = new HomePage(driver);
-		home.digita();
+		home.digitaFalha();
 	}
 
 	@Entao("^a mensagem de item nao encontrado aparecera$")
 	public void a_mensagem_de_item_nao_encontrado_aparecera() {
-		LupaPage lupa = new LupaPage(driver);
-		lupa.produto();
+		LupaPage pesquisa = new LupaPage(driver);
+		pesquisa.buscaInvalida();
 		DriverFactory.fechaDriver(driver);
 	}
 }

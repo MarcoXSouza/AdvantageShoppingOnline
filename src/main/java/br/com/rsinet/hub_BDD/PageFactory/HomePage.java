@@ -61,5 +61,10 @@ public class HomePage {
 		ExcelUtils.setExcelFile(Constantes.path, "Lupa");
 		DIGITA.sendKeys(ExcelData.nome + Keys.ENTER);
 	}
+	
+	public void digitaFalha() throws Exception {
+		ExcelUtils.setExcelFile(Constantes.path, "Lupa");
+		DIGITA.sendKeys(ExcelData.ultimoNome + Keys.ENTER);
+	}
 
 }

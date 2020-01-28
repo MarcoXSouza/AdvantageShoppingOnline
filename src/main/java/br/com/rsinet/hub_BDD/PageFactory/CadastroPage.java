@@ -1,10 +1,13 @@
 package br.com.rsinet.hub_BDD.PageFactory;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub_BDD.utilitys.Constantes;
 import br.com.rsinet.hub_BDD.utilitys.ExcelData;
@@ -59,6 +62,9 @@ public class CadastroPage {
 	@FindBy(how = How.ID, using = "register_btnundefined")
 	private WebElement BTNREGISTRAR;
 
+	@FindBy(how = How.XPATH, using = "//*[@id=\"menuUserLink\"]/span")
+	private WebElement PAGINA;
+
 	public void aceitarTermos() {
 		ACEITARTERMOS.click();
 	}
@@ -83,8 +89,26 @@ public class CadastroPage {
 		CEP.sendKeys(ExcelData.cep);
 	}
 
+	
 	public void valida() {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.urlToBe("https://www.advantageonlineshopping.com/#/"));
+		String mensagem = driver.getCurrentUrl();
+		Assert.assertTrue(mensagem.contains("https://www.advantageonlineshopping.com/#/"));
+
 	}
+//	public void validaPositivo() {
+//		String compara = PAGINA.getText();
+//		Assert.assertTrue(compara, "");
+//	}
+	
+	public void validaNegativo() {
+		String compara = "";
+//		Assert.assertTrue(compara, "");
+		
+	}
+	
+	
 	
 	
 	

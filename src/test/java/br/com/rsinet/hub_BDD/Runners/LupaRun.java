@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		glue = "br.com.rsinet.hub_BDD.teststeps",
 		monochrome = true,
 		dryRun = false,
-		tags = {"@Pesquisa_pela_Lupa"
+		tags = {"@Pesquisa_pela_Lupa "
 		} 
 		)
 
