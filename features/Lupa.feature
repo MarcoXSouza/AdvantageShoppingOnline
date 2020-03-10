@@ -7,16 +7,18 @@ Funcionalidade: Pesquisa pela lupa
 
   @Lupa_Sucesso
   Esquema do Cenario: Busca com Sucesso na Home Page
-    E pesquisar o produto "<produto>"
-    Quando escolher o produto 
-    Entao adicionar o produto carrinho
-    
-    Exemplos:
-    |produto|
-    |tablet|
+    Quando pesquisar o produto "<produto>"
+    Entao escolher produto
+
+    Exemplos: 
+      | produto                    |
+      | HP ELITEPAD 1000 G2 TABLET |
 
   @Lupa_Falha
   Esquema do Cenario: Busca item inexistente no site
-    E pesquisar o produto
-    Quando escolher o produto 
+    Quando pesquisar o produto "<produto>"
     Entao a mensagem de item nao encontrado aparecera
+
+    Exemplos: 
+      | produto |
+      | chinelo |

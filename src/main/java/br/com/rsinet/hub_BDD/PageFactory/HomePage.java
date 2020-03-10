@@ -54,7 +54,7 @@ public class HomePage {
 	}
 
 	public void getDigita(String produto) {
-		digita.sendKeys(produto);
+		digita.sendKeys(produto + Keys.ENTER);
 	}
 
 }

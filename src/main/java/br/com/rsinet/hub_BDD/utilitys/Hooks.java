@@ -10,22 +10,21 @@ import cucumber.api.java.Before;
 public class Hooks {
 	private TestContext testContext;
 	public WebDriver driver;
-	
+
 	public Hooks(TestContext context) {
 		testContext = context;
 	}
-//	
-//	@Before
-//	public void iniciaBrowser() {
-//		testContext.getDriverFactory().iniciaNavegador();
-//		System.out.println("inicio");
-//	}
-//	
-//	@After
-//	public void fechaBrowser() throws IOException, InterruptedException {
-//		testContext.getDriverFactory().fechaDriver();
-//		System.out.println("fim");
-//	}
-//	
+
+	@Before
+	public void iniciaBrowser() {
+		testContext.getDriverFactory().iniciaNavegador();
+		System.out.println("inicio");
+	}
+
+	@After
+	public void fechaBrowser() throws IOException, InterruptedException {
+		testContext.getDriverFactory().fechaDriver();
+		System.out.println("fim");
+	}
 
 }

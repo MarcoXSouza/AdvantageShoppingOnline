@@ -20,21 +20,18 @@ public class LupaSteps {
 
 	@Dado("^que cliquei na lupa$")
 	public void que_cliquei_na_lupa() {
-		
+		home.getMenu();
 	}
 
-	@Dado("^pesquisar o produto \"([^\"]*)\"$")
+	@Quando("^pesquisar o produto \"([^\"]*)\"$")
 	public void pesquisar_o_produto(String produto) {
-
+		home.getDigita(produto);
+		lupa.produto();
 	}
 
-	@Quando("^escolher o produto$")
-	public void escolher_o_produto() {
-
-	}
-
-	@Entao("^adicionar o produto carrinho$")
-	public void adicionar_o_produto_carrinho() {
+	@Entao("^escolher produto$")
+	public void escolher_produto() {
+		lupa.adicionaAoCarrinho();
 
 	}
 

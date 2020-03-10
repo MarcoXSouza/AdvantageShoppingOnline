@@ -12,7 +12,7 @@ public class LupaPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.ID, using = "2")
+	@FindBy(how = How.LINK_TEXT, using = "HP ElitePad 1000 G2 Tablet")
 	private WebElement produto;
 
 	@FindBy(how = How.NAME, using = "save_to_cart")
