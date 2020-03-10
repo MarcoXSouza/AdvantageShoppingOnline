@@ -6,31 +6,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverFactory {
+	private static WebDriver driver;
 
-	private DriverFactory() {
+	public static WebDriver iniciaBrowser() {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.advantageonlineshopping.com/#/");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		return driver;
 	}
 
-	public static WebDriver iniciaNavegador() {
-		WebDriver driver = null;
-
+	public WebDriver iniciaNavegador() {
 		if (driver == null) {
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.get("https://www.advantageonlineshopping.com/#/");
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
+			return iniciaBrowser();
 		}
 		return driver;
-
 	}
 
-	public static void fechaDriver(WebDriver driver) {
+	public void fechaDriver() {
 		if (null != driver) {
 			driver.quit();
 			driver = null;
-
 		}
-
 	}
-
 }

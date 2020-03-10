@@ -7,14 +7,13 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "features\\Lupa.feature",
-		glue = "br.com.rsinet.hub_BDD.teststeps",
-		monochrome = true,
-		dryRun = false,
-		tags = {"@Pesquisa_pela_Lupa "
-		} 
+		features = "features"
+		, glue = "br.com.rsinet.hub_BDD.teststeps"
+		, monochrome = true
+		, dryRun = false
+		, tags = {"@Cadastro"}
 		)
 
-	public class LupaRun {
+		public class Runner {
 
 }

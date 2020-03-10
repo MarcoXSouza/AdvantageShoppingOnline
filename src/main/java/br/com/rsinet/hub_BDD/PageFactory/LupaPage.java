@@ -13,32 +13,32 @@ public class LupaPage {
 	}
 
 	@FindBy(how = How.ID, using = "2")
-	private WebElement PRODUTO;
+	private WebElement produto;
 
 	@FindBy(how = How.NAME, using = "save_to_cart")
-	private WebElement ADICIONARAOCARRINHO;
+	private WebElement adicionarAoCarrinho;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"shoppingCartLink\"]/span")
-	private WebElement CARRINHO;
+	private WebElement carrinho;
 	
 	@FindBy(how = How.ID, using = "searchPage")
-	private WebElement NAOENCONTRADO;
+	private WebElement naoEncontrado;
 
 	public void produto() {
-		PRODUTO.click();
+		produto.click();
 	}
 
 	public void adicionaAoCarrinho() {
-		ADICIONARAOCARRINHO.click();
+		adicionarAoCarrinho.click();
 	}
 	
 	public void verificaCarrinho() {
-		String compararCarrinho = CARRINHO.getText();
+		String compararCarrinho = carrinho.getText();
 		Assert.assertTrue(compararCarrinho.equals("1"));
 	}
 	
 	public void buscaInvalida() {
-		String naoEncontrada = NAOENCONTRADO.getText();
+		String naoEncontrada = naoEncontrado.getText();
 		Assert.assertTrue(naoEncontrada.contains("No results for "));
 	}
 	

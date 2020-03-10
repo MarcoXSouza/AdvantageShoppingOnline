@@ -14,39 +14,39 @@ public class BuscaPage {
 	}
 
 	@FindBy(how = How.ID, using = "1")
-	private WebElement ITENS;
+	private WebElement itens;
 
 	@FindBy(how = How.NAME, using = "save_to_cart")
-	private WebElement ADICIONAAOCARRINHO;
+	private WebElement adicionaAoCarrinho;
 
 	@FindBy(how = How.NAME, using = "quantity")
-	private WebElement QUANTIDADE;
+	private WebElement quantidade;
 
 	@FindBy(how = How.ID, using = "Description")
-	private WebElement MENSAGEM;
+	private WebElement mensagem;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"productProperties\"]/label")
-	private WebElement TEXTO;
+	private WebElement texto;
 
 	public void escolheItem() {
-		ITENS.click();
+		itens.click();
 	}
 
 	public void adicionaAoCarrinho() {
-		ADICIONAAOCARRINHO.click();
+		adicionaAoCarrinho.click();
 	}
 
 	public void quantidade() {
-		QUANTIDADE.sendKeys("11");
+		quantidade.sendKeys("11");
 	}
 
 	public void comparaPositivo() {
-		String text = MENSAGEM.getText();
+		String text = mensagem.getText();
 		Assert.assertTrue(text.contains("HP PAVILION 15T TOUCH LAPTOP"));
 	}
 	
 	public void comparaNegativo() {
-		String text = TEXTO.getText();
+		String text = texto.getText();
 		Assert.assertTrue(text.equals("Oops! We only have 10 in stock. We updated your order accordingly"));
 	}
 	

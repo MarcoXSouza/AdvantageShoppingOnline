@@ -1,20 +1,22 @@
 # language: pt
+@Lupa
+Funcionalidade: Pesquisa pela lupa
 
-@Pesquisa_pela_Lupa 
-Funcionalidade: Pesquisa pela lupa 
+  Contexto: Home page
+    Dado que cliquei na lupa
 
-Contexto: Home page
-	Dado estou no site advantagedemo na pagina inicial 
-	Quando clicar na lupa 
+  @Lupa_Sucesso
+  Esquema do Cenario: Busca com Sucesso na Home Page
+    E pesquisar o produto "<produto>"
+    Quando escolher o produto 
+    Entao adicionar o produto carrinho
+    
+    Exemplos:
+    |produto|
+    |tablet|
 
-@Pesquisa_pela_Lupa_com_sucesso 
-Cenario: Busca com Sucesso na Home Page 
-	E digitar o produto desejado 
-	E escolher o produto 
-	Entao o produto devera ser adicionado no carrinho 
-	E a mensagem de adcionado ao carrinho com sucesso aparecera 
-	
-@Falha_Ao_Pesquisar_Pela_Lupa 
-Cenario: Busca item inexistente no site 
-	E digitar o item que deseja 
-	Entao a mensagem de item nao encontrado aparecera
+  @Lupa_Falha
+  Esquema do Cenario: Busca item inexistente no site
+    E pesquisar o produto
+    Quando escolher o produto 
+    Entao a mensagem de item nao encontrado aparecera
