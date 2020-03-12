@@ -1,11 +1,9 @@
 package br.com.rsinet.hub_BDD.PageFactory;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 
 public class BuscaPage {
 	public BuscaPage(WebDriver driver) {
@@ -21,11 +19,19 @@ public class BuscaPage {
 	@FindBy(name = "quantity")
 	private WebElement quantidade;
 
-	@FindBy(id =  "Description")
+	@FindBy(id = "Description")
 	private WebElement mensagem;
 
 	@FindBy(xpath = "//*[@id=\"productProperties\"]/label")
 	private WebElement texto;
+
+	public String produto() {
+		return "HP PAVILION 15T TOUCH LAPTOP";
+	}
+
+	public String qtdExcedida() {
+		return "Oops! We only have 10 in stock. We updated your order accordingly";
+	}
 
 	public void escolheItem() {
 		itens.click();
@@ -39,14 +45,12 @@ public class BuscaPage {
 		quantidade.sendKeys("11");
 	}
 
-	public void comparaPositivo() {
-		String text = mensagem.getText();
-		Assert.assertTrue(text.contains("HP PAVILION 15T TOUCH LAPTOP"));
+	public String comparaPositivo() {
+		return mensagem.getText();
 	}
-	
-	public void comparaNegativo() {
-		String text = texto.getText();
-		Assert.assertTrue(text.equals("Oops! We only have 10 in stock. We updated your order accordingly"));
+
+	public String comparaNegativo() {
+		return texto.getText();
 	}
-	
+
 }

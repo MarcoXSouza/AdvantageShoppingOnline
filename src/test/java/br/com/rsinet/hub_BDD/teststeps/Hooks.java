@@ -36,7 +36,7 @@ public class Hooks {
 					.getScreenshotAs(OutputType.FILE);
 
 			File destinationPath = new File(
-					"C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Report"
+					"C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Report\\"
 							+ screenshotName + ".png");
 
 			Files.copy(sourcePath, destinationPath);
