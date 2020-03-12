@@ -3,6 +3,7 @@ package br.com.rsinet.hub_BDD.teststeps;
 import br.com.rsinet.hub_BDD.PageFactory.CadastroPage;
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.utilitys.TestContext;
+import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 
@@ -23,7 +24,7 @@ public class CadastroSteps {
 		home.getCriarConta();
 	}
 
-	@Dado("^usuario preenche cadastro \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" "
+	@Quando("^usuario preenche cadastro \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" "
 			+ "\"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
 	public void usuario_preenche_cadastro(String nome, String email, String senha, String sobrenome, String telefone,
 			String estado, String endereco, String cidade, String cep, String pais) {

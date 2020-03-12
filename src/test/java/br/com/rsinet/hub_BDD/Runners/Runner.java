@@ -1,6 +1,11 @@
 package br.com.rsinet.hub_BDD.Runners;
 
+import java.io.File;
+
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+
+import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -11,9 +16,13 @@ import cucumber.api.junit.Cucumber;
 		, glue = "br.com.rsinet.hub_BDD.teststeps"
 		, monochrome = true
 		, dryRun = false
-		, tags = {"@Cadastro"}
+		, plugin = {"com.cucumber.listener.ExtentCucumberFormatter:C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Report\\report.html"}
+		, tags = {"@Busca"}
 		)
 
-		public class Runner {
-
-}
+	public class Runner {
+		@AfterClass
+		public static void writeExtentReport() {
+			Reporter.loadXMLConfig(new File("C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Config.xml"));
+		}
+	}

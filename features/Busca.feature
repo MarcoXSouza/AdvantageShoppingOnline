@@ -13,5 +13,5 @@ Funcionalidade: Busca pela home page
   @Busca_Falha
   Cenario: Falha ao comprar mais de dez itens
     Quando clicar em algum produto
-    Quando adicionar onze produtos no carrinho
+    E adicionar onze produtos no carrinho
     Entao a mensagem limite atingido aparecera
