@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class LupaPage {
@@ -12,16 +11,16 @@ public class LupaPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.LINK_TEXT, using = "HP ElitePad 1000 G2 Tablet")
+	@FindBy(linkText = "HP ElitePad 1000 G2 Tablet")
 	private WebElement produto;
 
-	@FindBy(how = How.NAME, using = "save_to_cart")
+	@FindBy(name = "save_to_cart")
 	private WebElement adicionarAoCarrinho;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"shoppingCartLink\"]/span")
+	@FindBy(xpath = "//*[@id=\"shoppingCartLink\"]/span")
 	private WebElement carrinho;
 	
-	@FindBy(how = How.ID, using = "searchPage")
+	@FindBy(id = "searchPage")
 	private WebElement naoEncontrado;
 
 	public void produto() {

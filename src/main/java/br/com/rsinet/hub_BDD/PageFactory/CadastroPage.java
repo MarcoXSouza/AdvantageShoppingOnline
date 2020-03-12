@@ -4,7 +4,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class CadastroPage {
@@ -14,49 +13,49 @@ public class CadastroPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.NAME, using = "countryListboxRegisterPage")
+	@FindBy(name = "countryListboxRegisterPage")
 	private WebElement country;
 
-	@FindBy(how = How.NAME, using = "usernameRegisterPage")
+	@FindBy(name = "usernameRegisterPage")
 	private WebElement name;
 
-	@FindBy(how = How.NAME, using = "emailRegisterPage")
+	@FindBy(name = "emailRegisterPage")
 	private WebElement emailReg;
 
-	@FindBy(how = How.NAME, using = "passwordRegisterPage")
+	@FindBy(name = "passwordRegisterPage")
 	private WebElement password;
 
-	@FindBy(how = How.NAME, using = "confirm_passwordRegisterPage")
+	@FindBy(name = "confirm_passwordRegisterPage")
 	private WebElement confirmPassword;
 
-	@FindBy(how = How.NAME, using = "first_nameRegisterPage")
+	@FindBy(name = "first_nameRegisterPage")
 	private WebElement firstName;
 
-	@FindBy(how = How.NAME, using = "last_nameRegisterPage")
+	@FindBy(name = "last_nameRegisterPage")
 	private WebElement lastName;
 
-	@FindBy(how = How.NAME, using = "phone_numberRegisterPage")
+	@FindBy(name = "phone_numberRegisterPage")
 	private WebElement phone;
 
-	@FindBy(how = How.NAME, using = "cityRegisterPage")
+	@FindBy(name = "cityRegisterPage")
 	private WebElement city;
 
-	@FindBy(how = How.NAME, using = "addressRegisterPage")
+	@FindBy(name = "addressRegisterPage")
 	private WebElement address;
 
-	@FindBy(how = How.NAME, using = "state_/_province_/_regionRegisterPage")
+	@FindBy(name = "state_/_province_/_regionRegisterPage")
 	private WebElement state;
 
-	@FindBy(how = How.NAME, using = "postal_codeRegisterPage")
+	@FindBy(name = "postal_codeRegisterPage")
 	private WebElement zip;
 
-	@FindBy(how = How.NAME, using = "i_agree")
+	@FindBy(name = "i_agree")
 	private WebElement aceitarTermos;
 
-	@FindBy(how = How.ID, using = "register_btnundefined")
+	@FindBy(id = "register_btnundefined")
 	private WebElement btnRegistrar;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"formCover\"]/div[1]/div[1]/sec-view[1]/div/label")
+	@FindBy(xpath = "//*[@id=\"formCover\"]/div[1]/div[1]/sec-view[1]/div/label")
 	private WebElement mensagem;
 
 	public void getCountry(String pais) {
@@ -74,7 +73,7 @@ public class CadastroPage {
 		emailReg.sendKeys(email);
 	}
 
-	public void getPassword(String senha ) {
+	public void getPassword(String senha) {
 		password.click();
 		password.sendKeys(senha);
 	}
@@ -132,7 +131,6 @@ public class CadastroPage {
 	}
 
 }
-
 
 //	public void nomeInvalido() {
 //		String mensagem = MENSAGEM.getText();

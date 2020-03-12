@@ -4,7 +4,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,19 +15,19 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.ID, using = "menuUser")
+	@FindBy(id = "menuUser")
 	private WebElement linkCadastro;
 
-	@FindBy(how = How.XPATH, using = "/html/body/login-modal/div/div/div[3]/a[2]")
+	@FindBy(xpath = "/html/body/login-modal/div/div/div[3]/a[2]")
 	private WebElement criarConta;
 
-	@FindBy(how = How.ID, using = "laptopsImg")
+	@FindBy(id = "laptopsImg")
 	private WebElement itemDoMenu;
 	
-	@FindBy(how = How.ID, using = "menuSearch")
+	@FindBy(id = "menuSearch")
 	private WebElement menu;
 
-	@FindBy(how = How.ID, using = "autoComplete")
+	@FindBy(id = "autoComplete")
 	private WebElement digita;
 
 	public void Wait() {

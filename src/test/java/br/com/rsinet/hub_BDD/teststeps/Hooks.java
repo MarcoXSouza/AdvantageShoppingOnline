@@ -1,11 +1,11 @@
 package br.com.rsinet.hub_BDD.teststeps;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 
 import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
@@ -17,7 +17,6 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 	private TestContext testContext;
-	public WebDriver driver;
 
 	public Hooks(TestContext context) {
 		testContext = context;
@@ -36,7 +35,9 @@ public class Hooks {
 			File sourcePath = ((TakesScreenshot) testContext.getDriverFactory().iniciaNavegador())
 					.getScreenshotAs(OutputType.FILE);
 
-			File destinationPath = new File( "C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Report" + screenshotName + ".png");
+			File destinationPath = new File(
+					"C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Report"
+							+ screenshotName + ".png");
 
 			Files.copy(sourcePath, destinationPath);
 
@@ -45,7 +46,7 @@ public class Hooks {
 			System.out.println("Erro" + e.getMessage());
 		}
 
-		testContext.getDriverFactory().fechaDriver();;
+		testContext.getDriverFactory().fechaDriver();
 	}
 
 }
