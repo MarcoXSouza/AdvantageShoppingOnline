@@ -46,7 +46,7 @@ public class CadastroSteps {
 
 	@Entao("^o usuario sera cadastrado no site$")
 	public void o_usuario_sera_cadastrado_no_site() {
-//		Assert
+//		Assert.assertTrue(, message);
 	}
 
 	@Entao("^mensagem de usuario ja cadastrado$")

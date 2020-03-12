@@ -1,9 +1,9 @@
-package br.com.rsinet.hub_BDD.utilitys;
-
+package br.com.rsinet.hub_BDD.teststeps;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 
+import br.com.rsinet.hub_BDD.utilitys.TestContext;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 

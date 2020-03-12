@@ -132,14 +132,7 @@ public class CadastroPage {
 	}
 
 }
-//	public void aceitarTermos() {
-//		ACEITARTERMOS.click();
-//	}
-//
-//	public void btnRegistrar() throws InterruptedException {
-//		BTNREGISTRAR.click();
-//		Thread.sleep(1000);
-//	}
+
 
 //	public void nomeInvalido() {
 //		String mensagem = MENSAGEM.getText();
