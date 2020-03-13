@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 		, monochrome = true
 		, dryRun = false
 		, plugin = {"com.cucumber.listener.ExtentCucumberFormatter:C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Report\\report.html"}
-		, tags = {"@Busca"}
+		, tags = {"@Cadastro_Falha"}
 		)
 
 	public class Runner {

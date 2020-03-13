@@ -11,13 +11,13 @@ public class CadastroSteps {
 	private CadastroPage cadastro;
 	private HomePage home;
 	private TestContext testContext;
-	
+
 	public CadastroSteps(TestContext context) {
 		testContext = context;
 		cadastro = testContext.getPageObjectFactory().getCadastroPage();
 		home = testContext.getPageObjectFactory().getHomePage();
 	}
-	
+
 	@Dado("^clicar em novo registro$")
 	public void clicar_em_novo_registro() {
 		home.getLinkCadastro();
@@ -42,17 +42,18 @@ public class CadastroSteps {
 		cadastro.getZip(cep);
 		cadastro.getAceitarTermos();
 		cadastro.getBtnRegistrar();
-		
+
 	}
 
 	@Entao("^o usuario sera cadastrado no site$")
 	public void o_usuario_sera_cadastrado_no_site() {
-//		Assert.assertTrue(, message);
+//		Assert.assertTrue(mensagem.equals("Use maximum 15 character"));
 	}
 
 	@Entao("^mensagem de usuario ja cadastrado$")
 	public void mensagem_de_usuario_ja_cadastrado() {
-//		Assert
+//		Assert.assertTrue(usuarioLogado.equals("https://www.advantageonlineshopping.com/#/"));
+		System.out.println(cadastro.usuarioJaExiste());
 	}
 
 }

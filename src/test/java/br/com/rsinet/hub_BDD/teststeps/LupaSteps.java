@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.teststeps;
 
+import org.testng.Assert;
+
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.PageFactory.LupaPage;
 import br.com.rsinet.hub_BDD.utilitys.TestContext;
@@ -29,14 +31,21 @@ public class LupaSteps {
 		lupa.produto();
 	}
 
+	@Quando("^pesquisar o produto inexistente \"([^\"]*)\"$")
+	public void pesquisar_o_produto_inexistente(String produto) {
+		home.getDigita(produto);
+	}
+
 	@Entao("^escolher produto$")
 	public void escolher_produto() {
 		lupa.adicionaAoCarrinho();
+		Assert.assertTrue(lupa.verificaCarrinho().equals("1"));
 
 	}
 
 	@Entao("^a mensagem de item nao encontrado aparecera$")
 	public void a_mensagem_de_item_nao_encontrado_aparecera() {
+		Assert.assertTrue(lupa.buscaInvalida().contains("No results for "));
 
 	}
 

@@ -16,7 +16,7 @@ Funcionalidade: Pesquisa pela lupa
 
   @Lupa_Falha
   Esquema do Cenario: Busca item inexistente no site
-    Quando pesquisar o produto "<produto>"
+    Quando pesquisar o produto inexistente "<produto>"
     Entao a mensagem de item nao encontrado aparecera
 
     Exemplos: 

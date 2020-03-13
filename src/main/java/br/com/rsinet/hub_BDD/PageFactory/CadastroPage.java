@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_BDD.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,7 +57,7 @@ public class CadastroPage {
 	@FindBy(id = "register_btnundefined")
 	private WebElement btnRegistrar;
 
-	@FindBy(xpath = "//*[@id=\"formCover\"]/div[1]/div[1]/sec-view[1]/div/label")
+	@FindBy(xpath = "//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]")
 	private WebElement mensagem;
 
 	public void getCountry(String pais) {
@@ -130,16 +132,16 @@ public class CadastroPage {
 		mensagem.sendKeys();
 	}
 
-}
+	public void espera() {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
 
-//	public void nomeInvalido() {
-//		String mensagem = MENSAGEM.getText();
-//		Assert.assertTrue(mensagem.equals("Use maximum 15 character"));
-//	}
-//	
-//	public void pagInicial() {
-//		String usuarioLogado = driver.getCurrentUrl();
-//		Assert.assertTrue(usuarioLogado.equals("https://www.advantageonlineshopping.com/#/"));
-//
-//	}
-//	
+	public String usuarioJaExiste() {
+		return mensagem.getText();
+
+	}
+
+	public void esperar() {
+
+	}
+}

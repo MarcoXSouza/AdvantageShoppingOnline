@@ -1,6 +1,5 @@
 package br.com.rsinet.hub_BDD.PageFactory;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,14 +30,12 @@ public class LupaPage {
 		adicionarAoCarrinho.click();
 	}
 	
-	public void verificaCarrinho() {
-		String compararCarrinho = carrinho.getText();
-		Assert.assertTrue(compararCarrinho.equals("1"));
+	public String verificaCarrinho() {
+		return carrinho.getText();
 	}
 	
-	public void buscaInvalida() {
-		String naoEncontrada = naoEncontrado.getText();
-		Assert.assertTrue(naoEncontrada.contains("No results for "));
+	public String buscaInvalida() {
+		return naoEncontrado.getText();
 	}
 	
 }
