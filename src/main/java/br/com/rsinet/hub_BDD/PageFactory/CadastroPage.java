@@ -1,14 +1,17 @@
 package br.com.rsinet.hub_BDD.PageFactory;
 
-import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CadastroPage {
+
+	public static WebDriverWait wait;
 	public static WebDriver driver;
 
 	public CadastroPage(WebDriver driver) {
@@ -59,6 +62,10 @@ public class CadastroPage {
 
 	@FindBy(xpath = "//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]")
 	private WebElement mensagem;
+	
+
+	@FindBy(xpath = "//*[@id=\"menuUserLink\"]/span")
+	private WebElement usuario;
 
 	public void getCountry(String pais) {
 		country.click();
@@ -132,16 +139,19 @@ public class CadastroPage {
 		mensagem.sendKeys();
 	}
 
-	public void espera() {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	}
-
 	public String usuarioJaExiste() {
 		return mensagem.getText();
 
 	}
+	public String rerultadoBuscaNegativa() throws InterruptedException {
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'No results for ')]")));
+		return driver.findElement(By.xpath("//span[contains(text(),'No results for ')]")).getText();
 
-	public void esperar() {
+	}
 
+
+	public String usuarioLogado() {
+		return usuario.getText();
 	}
 }
