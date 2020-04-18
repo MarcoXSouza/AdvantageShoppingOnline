@@ -9,6 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.rsinet.hub_BDD.managers.DriverFactory;
+import br.com.rsinet.hub_BDD.utils.Wait;
+
 public class CadastroPage {
 
 	public static WebDriverWait wait;
@@ -62,7 +65,6 @@ public class CadastroPage {
 
 	@FindBy(xpath = "//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]")
 	private WebElement mensagem;
-	
 
 	@FindBy(xpath = "//*[@id=\"menuUserLink\"]/span")
 	private WebElement usuario;
@@ -143,6 +145,7 @@ public class CadastroPage {
 		return mensagem.getText();
 
 	}
+
 	public String rerultadoBuscaNegativa() throws InterruptedException {
 		wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'No results for ')]")));
@@ -150,6 +153,9 @@ public class CadastroPage {
 
 	}
 
+	public void getWait() {
+		Wait.untilPageLoadComplete(DriverFactory.getDriver());
+	}
 
 	public String usuarioLogado() {
 		return usuario.getText();

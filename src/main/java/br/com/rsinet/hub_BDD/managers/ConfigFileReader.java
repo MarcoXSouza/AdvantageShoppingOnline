@@ -28,12 +28,12 @@ public class ConfigFileReader {
 
 	}
 
-	public long getImplicityWait() {
-		String implicityWait = properties.getProperty("implicitywait");
-		if (implicityWait != null)
-			return Long.parseLong(implicityWait);
+	public long getImplicitlyWait() {
+		String implicitlyWait = properties.getProperty("implicitlyWait");
+		if (implicitlyWait != null)
+			return Long.parseLong(implicitlyWait);
 		else
-			throw new RuntimeException("imp{licitlyWait not specified in the Configuration.properties file.");
+			throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
 	}
 
 	public String getReportConfigPath() {

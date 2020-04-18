@@ -5,12 +5,12 @@ Funcionalidade: Busca pela home page
   Contexto: escolher item
     Dado eu escolher uma categoria
 
-  @Busca_Sucesso
+  @BuscaSucesso
   Cenario: Busca com Sucesso na Home Page
     Quando clicar em algum produto
     Entao o produto devera ser adicionado ao carrinho
 
-  @Busca_Falha
+  @BuscaFalha
   Cenario: Falha ao comprar mais de dez itens
     Quando clicar em algum produto
     E adicionar onze produtos no carrinho

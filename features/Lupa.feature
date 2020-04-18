@@ -5,7 +5,7 @@ Funcionalidade: Pesquisa pela lupa
   Contexto: Home page
     Dado que cliquei na lupa
 
-  @Lupa_Sucesso
+  @LupaSucesso
   Esquema do Cenario: Busca com Sucesso na Home Page
     Quando pesquisar o produto "<produto>"
     Entao escolher produto
@@ -14,7 +14,7 @@ Funcionalidade: Pesquisa pela lupa
       | produto                    |
       | HP ELITEPAD 1000 G2 TABLET |
 
-  @Lupa_Falha
+  @LupaFalha
   Esquema do Cenario: Busca item inexistente no site
     Quando pesquisar o produto inexistente "<produto>"
     Entao a mensagem de item nao encontrado aparecera

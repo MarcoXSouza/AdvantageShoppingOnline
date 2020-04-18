@@ -15,6 +15,9 @@ public class DriverFactory {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return driver;
 	}
+	public static WebDriver getDriver() {
+		return driver;
+	}
 
 	public WebDriver iniciaNavegador() {
 		if (driver == null) {
