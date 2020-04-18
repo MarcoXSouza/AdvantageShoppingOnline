@@ -20,7 +20,7 @@ public class LupaSteps {
 		lupa = testContext.getPageObjectFactory().getLupaPage();
 	}
 
-	@Dado("^que cliquei na lupa$")
+	@Dado("que cliquei na lupa")
 	public void que_cliquei_na_lupa() {
 		home.getMenu();
 	}

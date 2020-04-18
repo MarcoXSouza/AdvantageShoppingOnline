@@ -35,9 +35,7 @@ public class Hooks {
 			File sourcePath = ((TakesScreenshot) testContext.getDriverFactory().iniciaNavegador())
 					.getScreenshotAs(OutputType.FILE);
 
-			File destinationPath = new File(
-					"C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Report\\"
-							+ screenshotName + ".png");
+			File destinationPath = new File((System.getProperty("user.dir") + "\\Report\\" + screenshotName + ".png"));
 
 			Files.copy(sourcePath, destinationPath);
 

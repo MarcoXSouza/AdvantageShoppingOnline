@@ -16,13 +16,14 @@ import cucumber.api.junit.Cucumber;
 		, glue = "br.com.rsinet.hub_BDD.teststeps"
 		, monochrome = true
 		, dryRun = false
-		, plugin = {"com.cucumber.listener.ExtentCucumberFormatter:C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Report\\report.html"}
-		, tags = {"@Cadastro_Falha"}
+		, plugin = {"com.cucumber.listener.ExtentCucumberFormatter:Report\\report.html"}
+		, tags = {"@Lupa"}
 		)
 
 	public class Runner {
 		@AfterClass
 		public static void writeExtentReport() {
-			Reporter.loadXMLConfig(new File("C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\ProjetoBDD\\Config.xml"));
+			Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "\\ProjetoBDD\\Config.xml"));
 		}
 	}
+//C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\
