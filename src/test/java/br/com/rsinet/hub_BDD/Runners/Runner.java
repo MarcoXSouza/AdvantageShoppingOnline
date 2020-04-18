@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 
 import com.cucumber.listener.Reporter;
 
+import br.com.rsinet.hub_BDD.managers.FileReaderManager;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -23,7 +24,9 @@ import cucumber.api.junit.Cucumber;
 	public class Runner {
 		@AfterClass
 		public static void writeExtentReport() {
-			Reporter.loadXMLConfig(new File(System.getProperty("user.dir") + "\\ProjetoBDD\\Config.xml"));
+			Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigFileReader().getReportConfigPath()));
+			Reporter.setSystemInfo("Marcos.Xavier", System.getProperty("user.name"));
+			Reporter.setSystemInfo("SO", "Windows 10 64 bit");
+			Reporter.setSystemInfo("Java version", "1.8.0_231");
 		}
 	}
-//C:\\Users\\marcos.souza\\Documents\\Marcos\\Java\\ProjetoWebBdd\\

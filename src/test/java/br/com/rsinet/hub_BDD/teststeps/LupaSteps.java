@@ -4,7 +4,7 @@ import org.testng.Assert;
 
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.PageFactory.LupaPage;
-import br.com.rsinet.hub_BDD.utilitys.TestContext;
+import br.com.rsinet.hub_BDD.managers.TestContext;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
@@ -25,25 +25,25 @@ public class LupaSteps {
 		home.getMenu();
 	}
 
-	@Quando("^pesquisar o produto \"([^\"]*)\"$")
+	@Quando("pesquisar o produto \"([^\"]*)\"")
 	public void pesquisar_o_produto(String produto) {
 		home.getDigita(produto);
 		lupa.produto();
 	}
 
-	@Quando("^pesquisar o produto inexistente \"([^\"]*)\"$")
+	@Quando("pesquisar o produto inexistente \"([^\"]*)\"")
 	public void pesquisar_o_produto_inexistente(String produto) {
 		home.getDigita(produto);
 	}
 
-	@Entao("^escolher produto$")
+	@Entao("escolher produto")
 	public void escolher_produto() {
 		lupa.adicionaAoCarrinho();
 		Assert.assertTrue(lupa.verificaCarrinho().equals("1"));
 
 	}
 
-	@Entao("^a mensagem de item nao encontrado aparecera$")
+	@Entao("a mensagem de item nao encontrado aparecera")
 	public void a_mensagem_de_item_nao_encontrado_aparecera() {
 		Assert.assertTrue(lupa.buscaInvalida().contains("No results for "));
 

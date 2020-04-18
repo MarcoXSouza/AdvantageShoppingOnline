@@ -2,7 +2,7 @@ package br.com.rsinet.hub_BDD.teststeps;
 
 import br.com.rsinet.hub_BDD.PageFactory.CadastroPage;
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
-import br.com.rsinet.hub_BDD.utilitys.TestContext;
+import br.com.rsinet.hub_BDD.managers.TestContext;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
@@ -18,14 +18,14 @@ public class CadastroSteps {
 		home = testContext.getPageObjectFactory().getHomePage();
 	}
 
-	@Dado("^clicar em novo registro$")
+	@Dado("clicar em novo registro")
 	public void clicar_em_novo_registro() {
 		home.getLinkCadastro();
 		home.getCriarConta();
 	}
 
-	@Quando("^usuario preenche cadastro \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" "
-			+ "\"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+	@Quando("usuario preenche cadastro \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" "
+			+ "\"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"")
 	public void usuario_preenche_cadastro(String nome, String email, String senha, String sobrenome, String telefone,
 			String estado, String endereco, String cidade, String cep, String pais) {
 		cadastro.getName(nome);
@@ -45,13 +45,13 @@ public class CadastroSteps {
 
 	}
 
-	@Entao("^o usuario sera cadastrado no site \"([^\"]*)\"$")
+	@Entao("^o usuario sera cadastrado no site \"([^\"]*)\"")
 	public void o_usuario_sera_cadastrado_no_site(String nome) throws InterruptedException {
 //		Thread.sleep(1000);
 //		Assert.assertTrue(cadastro.usuarioLogado().contains(nome));
 	}
 
-	@Entao("^mensagem de usuario ja cadastrado$")
+	@Entao("^mensagem de usuario ja cadastrado")
 	public void mensagem_de_usuario_ja_cadastrado() throws InterruptedException {
 //		Thread.sleep(1000);
 //		Assert.assertTrue(cadastro.usuarioJaExiste().toLowerCase().contains("user name already exists"));

@@ -10,7 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 
-import br.com.rsinet.hub_BDD.utilitys.TestContext;
+import br.com.rsinet.hub_BDD.managers.TestContext;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;

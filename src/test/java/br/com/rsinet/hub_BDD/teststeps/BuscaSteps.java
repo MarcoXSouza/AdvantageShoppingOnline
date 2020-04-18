@@ -4,7 +4,7 @@ import org.testng.Assert;
 
 import br.com.rsinet.hub_BDD.PageFactory.BuscaPage;
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
-import br.com.rsinet.hub_BDD.utilitys.TestContext;
+import br.com.rsinet.hub_BDD.managers.TestContext;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;

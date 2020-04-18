@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.utilitys;
+package br.com.rsinet.hub_BDD.managers;
 
 public class TestContext {
 	private DriverFactory driverManager;
