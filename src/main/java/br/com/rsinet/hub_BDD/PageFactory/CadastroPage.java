@@ -9,9 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.com.rsinet.hub_BDD.managers.DriverFactory;
-import br.com.rsinet.hub_BDD.utils.Wait;
-
 public class CadastroPage {
 
 	public static WebDriverWait wait;
@@ -154,7 +151,7 @@ public class CadastroPage {
 	}
 
 	public void getWait() {
-		Wait.untilPageLoadComplete(DriverFactory.getDriver());
+//		Wait.untilPageLoadComplete(DriverFactory.getDriver());
 	}
 
 	public String usuarioLogado() {

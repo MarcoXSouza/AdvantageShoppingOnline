@@ -6,11 +6,13 @@ import br.com.rsinet.hub_BDD.PageFactory.BuscaPage;
 import br.com.rsinet.hub_BDD.PageFactory.CadastroPage;
 import br.com.rsinet.hub_BDD.PageFactory.HomePage;
 import br.com.rsinet.hub_BDD.PageFactory.LupaPage;
+import br.com.rsinet.hub_BDD.utils.Wait;
 
 public class PageObjectManager {
 
 	private WebDriver driver;
 
+	private Wait wait;
 	private CadastroPage cadastroPage;
 	private BuscaPage buscaPage;
 	private LupaPage lupaPage;
@@ -21,19 +23,23 @@ public class PageObjectManager {
 	}
 
 	public CadastroPage getCadastroPage() {
-		return (cadastroPage == null) ? cadastroPage = new CadastroPage(driver) : cadastroPage;	}
+		return (cadastroPage == null) ? cadastroPage = new CadastroPage(driver) : cadastroPage;
+	}
 
 	public BuscaPage getBuscaPage() {
-		return (buscaPage == null) ? buscaPage = new BuscaPage(driver) : buscaPage;	}
+		return (buscaPage == null) ? buscaPage = new BuscaPage(driver) : buscaPage;
+	}
 
 	public LupaPage getLupaPage() {
-		return (lupaPage == null) ? lupaPage = new LupaPage(driver) : lupaPage;	}
+		return (lupaPage == null) ? lupaPage = new LupaPage(driver) : lupaPage;
+	}
 
 	public HomePage getHomePage() {
-		return (homePage == null) ? homePage = new HomePage(driver) : homePage;	}
+		return (homePage == null) ? homePage = new HomePage(driver) : homePage;
+	}
 
+	public Wait getWait() {
+		return (wait == null) ? wait = new Wait() : wait;
+	}
 
-	
-	
-	
 }

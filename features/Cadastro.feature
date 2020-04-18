@@ -12,7 +12,7 @@ Funcionalidade: Cadastro de novo usuario
 
     Exemplos: 
       | nome        | email            | senha  | sobrenome | telefone      | estado | endereco     | cidade | cep       | pais   |
-      | california5 | marcos@email.com | aBc123 | Xavier    | (11)123445678 | SP     | Rua primeiro | Osasco | 09873-172 | Brazil |
+      | malandro | marcos@email.com | aBc123 | Xavier    | (11)123445678 | SP     | Rua primeiro | Osasco | 09873-172 | Brazil |
 
   @CadastroFalha
   Esquema do Cenario: Cadastro com falha
