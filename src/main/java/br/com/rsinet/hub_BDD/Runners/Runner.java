@@ -13,12 +13,12 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "features"
+		features = "src/test/resources/features"
 		, glue = "br.com.rsinet.hub_BDD.teststeps"
 		, monochrome = true
 		, dryRun = false
 		, plugin = {"com.cucumber.listener.ExtentCucumberFormatter:Report\\report.html"}
-		, tags = {"@CadastroSucesso"}
+		, tags = {"@BuscaSucesso"}
 		)
 
 	public class Runner {

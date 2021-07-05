@@ -2,17 +2,15 @@ package br.com.rsinet.hub_BDD.managers;
 
 import org.openqa.selenium.WebDriver;
 
-import br.com.rsinet.hub_BDD.PageFactory.BuscaPage;
-import br.com.rsinet.hub_BDD.PageFactory.CadastroPage;
-import br.com.rsinet.hub_BDD.PageFactory.HomePage;
-import br.com.rsinet.hub_BDD.PageFactory.LupaPage;
-import br.com.rsinet.hub_BDD.utils.Wait;
+import br.com.rsinet.hub_BDD.Page.BuscaPage;
+import br.com.rsinet.hub_BDD.Page.CadastroPage;
+import br.com.rsinet.hub_BDD.Page.HomePage;
+import br.com.rsinet.hub_BDD.Page.LupaPage;
 
 public class PageObjectManager {
 
 	private WebDriver driver;
 
-	private Wait wait;
 	private CadastroPage cadastroPage;
 	private BuscaPage buscaPage;
 	private LupaPage lupaPage;
@@ -38,8 +36,5 @@ public class PageObjectManager {
 		return (homePage == null) ? homePage = new HomePage(driver) : homePage;
 	}
 
-	public Wait getWait() {
-		return (wait == null) ? wait = new Wait() : wait;
-	}
 
 }

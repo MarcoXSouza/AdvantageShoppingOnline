@@ -4,7 +4,7 @@
 
 
 <head>
-	<meta charset='UTF-8' /> 
+	<meta charset='utf-8' /> 
 	<meta name='description' content='' />
 	<meta name='robots' content='noodp, noydir' />
 	<meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -15,18 +15,13 @@
 
 		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>BDD_AdvantageOnlineShopping - Cucumber Framework</title>
+	<title>ExtentReports</title>
 
 	<style type='text/css'>
-			
-      
-       
-      
-    
 	</style>
 </head>
 
-	<body class='extent dark default hide-overflow '>
+	<body class='extent standard default hide-overflow '>
 		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
 			<span><i class='material-icons'>desktop_windows</i></span>
 		</div>
@@ -39,12 +34,11 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>BDD_AdvantageOnlineShopping - Cucumber Report</span>
+		<span class='report-name'>ExtentReports</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -53,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 18, 2020 02:09:17 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Jul 5, 2021 08:53:53 PM</span>
 				</a>
 			</li>
 			<li>
@@ -79,7 +73,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -92,8 +85,8 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Cadastro</a></li>
-					<li><a href='#'>@CadastroSucesso</a></li>
+					<li><a href='#'>@Busca</a></li>
+					<li><a href='#'>@BuscaSucesso</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -141,10 +134,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -156,10 +149,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -174,68 +167,39 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Cadastro de novo usuario</span>
-						<span class='test-time'>Apr 18, 2020 02:09:17 AM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>Busca pela home page</span>
+						<span class='test-time'>Jul 5, 2021 08:53:53 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 18, 2020 02:09:17 AM</span>
-	<span class='label end-time'>Apr 18, 2020 02:09:33 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+29ms</span>
+	<span class='label start-time'>Jul 5, 2021 08:53:53 PM</span>
+	<span class='label end-time'>Jul 5, 2021 08:54:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+2ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
-				<span class='category label white-text'>@Cadastro</span>
+				<span class='category label white-text'>@Busca</span>
 			</div>
 	</div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
-				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+				<li class='node level-1  pass' status='pass' test-id='2'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Esquema do Cenario: Cadastro com sucesso</h5>
-						<span class="node-time label grey lighten-1 white-text">Apr 18, 2020 02:09:17 AM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+						<h5 class='node-name'>Scenario: Busca com Sucesso na Home Page</h5>
+						<span class="node-time label grey lighten-1 white-text">Jul 5, 2021 08:54:04 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 10s+943ms</span>
 						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>2:09:17 AM</td>
-													<td class='step-details'><table><tr><td>nome</td><td>email</td><td>senha</td><td>sobrenome</td><td>telefone</td><td>estado</td><td>endereco</td><td>cidade</td><td>cep</td><td>pais</td></tr><tr><td>malandro</td><td>marcos@email.com</td><td>aBc123</td><td>Xavier</td><td>(11)123445678</td><td>SP</td><td>Rua primeiro</td><td>Osasco</td><td>09873-172</td><td>Brazil</td></tr></table></td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-1  fail' status='fail' test-id='3'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario: Cadastro com sucesso</h5>
-						<span class="node-time label grey lighten-1 white-text">Apr 18, 2020 02:09:33 AM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 15s+981ms</span>
-						<span class='test-status right fail'>fail</span>
-								<span class='category label white-text'>@Cadastro</span>
-								<span class='category label white-text'>@CadastroSucesso</span>
+								<span class='category label white-text'>@BuscaSucesso</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2 leaf pass' status='pass' test-id='4'>
+				<li class='node level-2 leaf pass' status='pass' test-id='3'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Dado clicar em novo registro</h5>
-						<span class="node-time label grey lighten-1 white-text">Apr 18, 2020 02:09:29 AM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+620ms</span>
+						<h5 class='node-name'>Dado eu escolher uma categoria</h5>
+						<span class="node-time label grey lighten-1 white-text">Jul 5, 2021 08:54:00 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 4s+284ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -251,7 +215,35 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>2:09:29 AM</td>
+													<td class='timestamp'>8:54:00 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Quando clicar em algum produto</h5>
+						<span class="node-time label grey lighten-1 white-text">Jul 5, 2021 08:54:02 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+34ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:54:02 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -261,9 +253,9 @@
 				</li>
 				<li class='node level-2 leaf pass' status='pass' test-id='5'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Quando usuario preenche cadastro "malandro" "marcos@email.com" "aBc123" "Xavier" "(11)123445678" "SP" "Rua primeiro" "Osasco" "09873-172" "Brazil"</h5>
-						<span class="node-time label grey lighten-1 white-text">Apr 18, 2020 02:09:33 AM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 3s+526ms</span>
+						<h5 class='node-name'>Entao o produto devera ser adicionado ao carrinho</h5>
+						<span class="node-time label grey lighten-1 white-text">Jul 5, 2021 08:54:04 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+683ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -279,48 +271,11 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>2:09:33 AM</td>
+													<td class='timestamp'>8:54:04 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf fail' status='fail' test-id='6'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Entao o usuario sera cadastrado no site "malandro"</h5>
-						<span class="node-time label grey lighten-1 white-text">Apr 18, 2020 02:09:33 AM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+41ms</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='fail'>
-													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>2:09:33 AM</td>
-													<td class='step-details'><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at br.com.rsinet.hub_BDD.teststeps.CadastroSteps.o_usuario_sera_cadastrado_no_site(CadastroSteps.java:56)
-	at ✽.Entao o usuario sera cadastrado no site "malandro"(Cadastro.feature:11)
-</pre></td>
-												</tr>
-										</tbody>
-									</table>
-										<ul class='screenshots'>
-												<li><img data-featherlight='C:\Users\marcos.souza\eclipse-workspace\ProjetoBDD\Report\Cadastro_com_sucesso.png' width='10%' src='C:\Users\marcos.souza\eclipse-workspace\ProjetoBDD\Report\Cadastro_com_sucesso.png' data-src='C:\Users\marcos.souza\eclipse-workspace\ProjetoBDD\Report\Cadastro_com_sucesso.png'></li>
-										</ul>
 								</div>
 						</div>
 				</li>
@@ -381,15 +336,15 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Cadastro</span>
+						<span class='category-name'>@Busca</span>
 						<span class='category-status right'>
-							<span class='label fail'>2</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 					
@@ -404,14 +359,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 18, 2020 02:09:17 AM</td>
-										<td class='linked' test-id='1'>Cadastro de novo usuario</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>Apr 18, 2020 02:09:17 AM</td>
-										<td class='linked' test-id='3'>Cadastro de novo usuario.Scenario: Cadastro com sucesso</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Jul 5, 2021 08:53:53 PM</td>
+										<td class='linked' test-id='1'>Busca pela home page</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -420,15 +370,15 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@CadastroSucesso</span>
+						<span class='category-name'>@BuscaSucesso</span>
 						<span class='category-status right'>
-							<span class='label fail'>1</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -443,9 +393,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 18, 2020 02:09:17 AM</td>
-										<td class='linked' test-id='3'>Cadastro de novo usuario.Scenario: Cadastro com sucesso</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Jul 5, 2021 08:53:53 PM</td>
+										<td class='linked' test-id='2'>Busca pela home page.Scenario: Busca com Sucesso na Home Page</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -464,73 +414,6 @@
 	</div>
 </div>
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.AssertionError</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Apr 18, 2020 02:09:33 AM</td>
-                                                        <td class='linked' test-id='6'>Cadastro de novo usuario.Scenario: Cadastro com sucesso.Entao o usuario sera cadastrado no site "malandro"</td>
-                                                        <td><pre><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at br.com.rsinet.hub_BDD.teststeps.CadastroSteps.o_usuario_sera_cadastrado_no_site(CadastroSteps.java:56)
-	at ✽.Entao o usuario sera cadastrado no site "malandro"(Cadastro.feature:11)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -540,55 +423,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 18, 2020 02:09:17 AM</div>
+					<div class='panel-lead'>Jul 5, 2021 08:53:53 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 18, 2020 02:09:34 AM</div>
+			 		<div class='panel-lead'>Jul 5, 2021 08:54:05 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>17,032ms</div>
-				</div>
-			</div>
-			<div class='col s4'>
-				<div class='card-panel dashboard-environment'>
-					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
-					
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Value</th>
-						</tr>
-							<tr>
-								<td>Marcos.Xavier</td>
-								<td>marcos.souza</td>
-							</tr>
-							<tr>
-								<td>SO</td>
-								<td>Windows 10 64 bit</td>
-							</tr>
-							<tr>
-								<td>Java version</td>
-								<td>1.8.0_231</td>
-							</tr>
-					</table>
+					<div class='panel-lead'>11,809ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -604,21 +463,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Cadastro</td>
+							<td>@Busca</td>
+							<td>1</td>
 							<td>0</td>
-							<td>2</td>
 							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 						<tr>
-							<td>@CadastroSucesso</td>
-							<td>0</td>
+							<td>@BuscaSucesso</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -635,21 +494,21 @@
 		<script>
 			var statusGroup = {
 				passParent: 3,
-				failParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 2,
-				failChild: 1,
+				passChild: 3,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 1,
-				exceptionsChild: 1,
+				infoChild: 0,
+				exceptionsChild: 0,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,
@@ -666,13 +525,6 @@
 		
 		
  		<script type='text/javascript'>
- 			
-      
-        $(document).ready(function() {
-       
-        });
-      
-    
  		</script>
 	</body>
 	

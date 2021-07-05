@@ -1,10 +1,10 @@
 package br.com.rsinet.hub_BDD.teststeps;
 
-import org.testng.Assert;
+import org.junit.Assert;
 
-import br.com.rsinet.hub_BDD.PageFactory.BuscaPage;
-import br.com.rsinet.hub_BDD.PageFactory.HomePage;
-import br.com.rsinet.hub_BDD.managers.TestContext;
+import br.com.rsinet.hub_BDD.Page.BuscaPage;
+import br.com.rsinet.hub_BDD.Page.HomePage;
+import br.com.rsinet.hub_BDD.utils.TestContext;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
