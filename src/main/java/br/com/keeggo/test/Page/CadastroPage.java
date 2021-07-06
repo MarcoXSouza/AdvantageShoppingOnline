@@ -153,4 +153,13 @@ public class CadastroPage {
 	public String usuarioLogado() {
 		return usuario.getText();
 	}
+
+	public void cadastrarUsuario(String nome, String email, String senha) {
+		getName(nome);
+		getEmailReg(email);
+		getPassword(senha);
+		getConfirmPassword(senha);
+		getAceitarTermos();
+		getBtnRegistrar();
+	}
 }

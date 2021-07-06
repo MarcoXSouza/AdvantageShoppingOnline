@@ -2,22 +2,22 @@
 @Cadastro
 Funcionalidade: Cadastro de novo usuario
 
-  @CadastroSucesso
-  Esquema do Cenario: Cadastro com sucesso
+  @Cadastro_usuario_com_sucesso
+  Esquema do Cenario: Cadastrar usuario com sucesso
     Dado clicar em novo registro
-    Quando usuario preenche cadastro "<nome>" "<email>" "<senha>" "<sobrenome>" "<telefone>" "<estado>" "<endereco>" "<cidade>" "<cep>" "<pais>"
+    Quando usuario preenche cadastro "<nome>" "<email>" "<senha>"
     Entao o usuario sera cadastrado no site "<nome>"
 
     Exemplos: 
-      | nome        | email   	        | senha  | sobrenome | telefone      | estado | endereco       | cidade | cep       | pais   |
-      | Abigail 		| abigail@email.com | aBc123 | Jorge     | (11)123445678 | SP     | Rua dos pombos | Osasco | 06246-040 | Brazil |
+      | nome    | email   	        | senha  |
+      | Jones	| abigail@email.com | aBc123 |
 
-  @CadastroFalha
-  Esquema do Cenario: Cadastro com falha
+  @Cadastro_usuario_invalido
+  Esquema do Cenario: Cadastro usuario invalido
     Dado clicar em novo registro
-    Quando usuario preenche cadastro "<nome>" "<email>" "<senha>" "<sobrenome>" "<telefone>" "<estado>" "<endereco>" "<cidade>" "<cep>" "<pais>"
+    Quando usuario preenche cadastro "<nome>" "<email>" "<senha>" 
     Entao mensagem de usuario ja cadastrado
 
     Exemplos: 
-      | nome  | email            | senha  | sobrenome | telefone      | estado | endereco     | cidade | cep       | pais   |
-      | iudbf | marcos@email.com | aBc123 | Xavier    | (11)123445678 | SP     | Rua primeiro | Osasco | 09873-172 | Brazil |
+      | nome  | email   | senha  |
+      | iudbf | marcos@ | aBc123 |
