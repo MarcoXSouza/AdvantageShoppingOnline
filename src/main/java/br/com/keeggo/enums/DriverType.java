@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.enums;
+package br.com.keeggo.enums;
 
 public enum DriverType {
 		FIREFOX,

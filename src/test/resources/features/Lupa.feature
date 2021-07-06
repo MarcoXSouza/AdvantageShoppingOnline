@@ -2,11 +2,9 @@
 @Lupa
 Funcionalidade: Pesquisa pela lupa
 
-  Contexto: Home page
-    Dado que cliquei na lupa
-
   @LupaSucesso
   Esquema do Cenario: Busca com Sucesso na Home Page
+    Dado que cliquei na lupa
     Quando pesquisar o produto "<produto>"
     Entao escolher produto
 
@@ -16,6 +14,7 @@ Funcionalidade: Pesquisa pela lupa
 
   @LupaFalha
   Esquema do Cenario: Busca item inexistente no site
+    Dado que cliquei na lupa
     Quando pesquisar o produto inexistente "<produto>"
     Entao a mensagem de item nao encontrado aparecera
 

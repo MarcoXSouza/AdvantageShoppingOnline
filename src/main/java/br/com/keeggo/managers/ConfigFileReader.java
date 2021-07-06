@@ -1,11 +1,11 @@
-package br.com.rsinet.hub_BDD.managers;
+package br.com.keeggo.managers;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Properties;
 
-import br.com.rsinet.hub_BDD.enums.DriverType;
+import br.com.keeggo.enums.DriverType;
 
 public class ConfigFileReader {
 	private Properties properties;

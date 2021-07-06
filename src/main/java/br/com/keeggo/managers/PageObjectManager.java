@@ -1,11 +1,11 @@
-package br.com.rsinet.hub_BDD.managers;
+package br.com.keeggo.managers;
 
 import org.openqa.selenium.WebDriver;
 
-import br.com.rsinet.hub_BDD.Page.BuscaPage;
-import br.com.rsinet.hub_BDD.Page.CadastroPage;
-import br.com.rsinet.hub_BDD.Page.HomePage;
-import br.com.rsinet.hub_BDD.Page.LupaPage;
+import br.com.keeggo.Page.BuscaPage;
+import br.com.keeggo.Page.CadastroPage;
+import br.com.keeggo.Page.HomePage;
+import br.com.keeggo.Page.LupaPage;
 
 public class PageObjectManager {
 

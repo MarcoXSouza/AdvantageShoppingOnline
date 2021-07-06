@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.managers;
+package br.com.keeggo.managers;
 
 public class FileReaderManager {
 

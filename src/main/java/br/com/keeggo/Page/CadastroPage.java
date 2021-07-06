@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.Page;
+package br.com.keeggo.Page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -148,10 +148,6 @@ public class CadastroPage {
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'No results for ')]")));
 		return driver.findElement(By.xpath("//span[contains(text(),'No results for ')]")).getText();
 
-	}
-
-	public void getWait() {
-//		Wait.untilPageLoadComplete(DriverFactory.getDriver());
 	}
 
 	public String usuarioLogado() {

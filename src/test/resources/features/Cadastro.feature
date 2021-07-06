@@ -2,20 +2,19 @@
 @Cadastro
 Funcionalidade: Cadastro de novo usuario
 
-  Contexto: 
-    Dado clicar em novo registro
-
   @CadastroSucesso
   Esquema do Cenario: Cadastro com sucesso
+    Dado clicar em novo registro
     Quando usuario preenche cadastro "<nome>" "<email>" "<senha>" "<sobrenome>" "<telefone>" "<estado>" "<endereco>" "<cidade>" "<cep>" "<pais>"
     Entao o usuario sera cadastrado no site "<nome>"
 
     Exemplos: 
       | nome        | email            | senha  | sobrenome | telefone      | estado | endereco     | cidade | cep       | pais   |
-      | malandro | marcos@email.com | aBc123 | Xavier    | (11)123445678 | SP     | Rua primeiro | Osasco | 09873-172 | Brazil |
+      | malandro 		| marcos@email.com | aBc123 | Xavier    | (11)123445678 | SP     | Rua primeiro | Osasco | 09873-172 | Brazil |
 
   @CadastroFalha
   Esquema do Cenario: Cadastro com falha
+    Dado clicar em novo registro
     Quando usuario preenche cadastro "<nome>" "<email>" "<senha>" "<sobrenome>" "<telefone>" "<estado>" "<endereco>" "<cidade>" "<cep>" "<pais>"
     Entao mensagem de usuario ja cadastrado
 

@@ -1,7 +1,7 @@
-package br.com.rsinet.hub_BDD.teststeps;
+package br.com.keeggo.teststeps;
 
-import br.com.rsinet.hub_BDD.managers.ConfigFileReader;
-import br.com.rsinet.hub_BDD.utils.TestContext;
+import br.com.keeggo.managers.ConfigFileReader;
+import br.com.keeggo.utils.TestContext;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 

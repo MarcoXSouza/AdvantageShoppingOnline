@@ -1,7 +1,7 @@
-package br.com.rsinet.hub_BDD.utils;
+package br.com.keeggo.utils;
 
-import br.com.rsinet.hub_BDD.managers.DriverManager;
-import br.com.rsinet.hub_BDD.managers.PageObjectManager;
+import br.com.keeggo.managers.DriverManager;
+import br.com.keeggo.managers.PageObjectManager;
 
 public class TestContext {
 	private DriverManager driverManager;

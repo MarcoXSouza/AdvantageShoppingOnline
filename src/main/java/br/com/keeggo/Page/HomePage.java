@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_BDD.Page;
+package br.com.keeggo.Page;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

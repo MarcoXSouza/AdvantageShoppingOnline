@@ -1,10 +1,10 @@
-package br.com.rsinet.hub_BDD.teststeps;
+package br.com.keeggo.teststeps;
 
 import org.junit.Assert;
 
-import br.com.rsinet.hub_BDD.Page.CadastroPage;
-import br.com.rsinet.hub_BDD.Page.HomePage;
-import br.com.rsinet.hub_BDD.utils.TestContext;
+import br.com.keeggo.Page.CadastroPage;
+import br.com.keeggo.Page.HomePage;
+import br.com.keeggo.utils.TestContext;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
