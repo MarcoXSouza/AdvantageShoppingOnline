@@ -2,19 +2,17 @@ package br.com.keeggo.test.teststeps;
 
 import br.com.keeggo.core.utils.TestContext;
 import br.com.keeggo.test.Page.CadastroPage;
-import br.com.keeggo.test.Page.LoginPage;
 import cucumber.api.java.it.Quando;
+import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
 
 public class CadastroSteps {
 	private CadastroPage cadastro;
-	private LoginPage login;
 	private TestContext testContext;
 
 	public CadastroSteps(TestContext context) {
 		testContext = context;
 		cadastro = testContext.getPageObjectFactory().getCadastroPage();
-		login = testContext.getPageObjectFactory().getLoginPage();
 	}
 
 	@Quando("usuario preenche cadastro \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"")
@@ -22,15 +20,16 @@ public class CadastroSteps {
 		cadastro.cadastrarUsuario(nome, email, senha);
 		
 	}
-
-	@Entao("^o usuario sera cadastrado no site \"([^\"]*)\"")
-	public void o_usuario_sera_cadastrado_no_site(String nome) {
-		login.getValidarLoginComSucesso(nome);
+	
+	@E("aceitar termos de cadastro")
+	public void aceitar_termos_de_cadastro() {
+		cadastro.getAceitaTermosECadastra();
+		
 	}
 
-	@Entao("^mensagem de usuario ja cadastrado")
+	@Entao("valido cadastro invalido")
 	public void mensagem_de_usuario_ja_cadastrado() {
-	
+		cadastro.getValidarCadastroInvalido();
 	}
 
 }

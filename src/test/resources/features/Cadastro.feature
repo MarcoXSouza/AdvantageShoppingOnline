@@ -2,22 +2,23 @@
 @Cadastro
 Funcionalidade: Cadastro de novo usuario
 
-  @Cadastro_usuario_com_sucesso
+  @Cadastro_com_sucesso
   Esquema do Cenario: Cadastrar usuario com sucesso
     Dado clicar em novo registro
     Quando usuario preenche cadastro "<nome>" "<email>" "<senha>"
-    Entao o usuario sera cadastrado no site "<nome>"
-
+		E aceitar termos de cadastro
+		Entao validar login efetuado com sucesso "<usuario>"
+		
     Exemplos: 
-      | nome    | email   	        | senha  |
-      | Jones	| abigail@email.com | aBc123 |
+      | nome    | email   	       | senha  |
+      | Jones	  | testes@email.com | aBc123 |
 
-  @Cadastro_usuario_invalido
+  @Cadastro_invalido
   Esquema do Cenario: Cadastro usuario invalido
     Dado clicar em novo registro
     Quando usuario preenche cadastro "<nome>" "<email>" "<senha>" 
-    Entao mensagem de usuario ja cadastrado
+    Entao valido cadastro invalido
 
     Exemplos: 
-      | nome  | email   | senha  |
-      | iudbf | marcos@ | aBc123 |
+      | nome | email   | senha |
+      | marc | marcos@ | a123  |
