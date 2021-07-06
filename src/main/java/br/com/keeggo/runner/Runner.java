@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 		, monochrome = true
 		, dryRun = false
 		, plugin = {"com.cucumber.listener.ExtentCucumberFormatter:Report\\report.html"}
-		, tags = {"@BuscaSucesso"}
+		, tags = {"@CadastroSucesso"}
 		)
 
 	public class Runner {
