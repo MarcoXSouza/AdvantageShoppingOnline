@@ -1,4 +1,4 @@
-package br.com.keeggo.managers;
+package br.com.keeggo.core.managers;
 
 public class FileReaderManager {
 

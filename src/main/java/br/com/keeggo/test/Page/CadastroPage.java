@@ -1,4 +1,4 @@
-package br.com.keeggo.Page;
+package br.com.keeggo.test.Page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

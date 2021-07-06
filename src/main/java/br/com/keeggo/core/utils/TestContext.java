@@ -1,7 +1,7 @@
-package br.com.keeggo.utils;
+package br.com.keeggo.core.utils;
 
-import br.com.keeggo.managers.DriverManager;
-import br.com.keeggo.managers.PageObjectManager;
+import br.com.keeggo.core.managers.DriverManager;
+import br.com.keeggo.core.managers.PageObjectManager;
 
 public class TestContext {
 	private DriverManager driverManager;

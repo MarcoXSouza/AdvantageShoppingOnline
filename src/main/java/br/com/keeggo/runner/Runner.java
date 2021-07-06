@@ -1,4 +1,4 @@
-package br.com.keeggo.Runners;
+package br.com.keeggo.runner;
 
 import java.io.File;
 
@@ -7,14 +7,14 @@ import org.junit.runner.RunWith;
 
 import com.cucumber.listener.Reporter;
 
-import br.com.keeggo.managers.FileReaderManager;
+import br.com.keeggo.core.managers.FileReaderManager;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources/features"
-		, glue = "br.com.keeggo.teststeps"
+		, glue = "br.com.keeggo.test.teststeps"
 		, monochrome = true
 		, dryRun = false
 		, plugin = {"com.cucumber.listener.ExtentCucumberFormatter:Report\\report.html"}

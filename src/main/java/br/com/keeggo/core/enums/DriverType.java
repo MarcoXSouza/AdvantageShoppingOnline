@@ -1,4 +1,4 @@
-package br.com.keeggo.enums;
+package br.com.keeggo.core.enums;
 
 public enum DriverType {
 		FIREFOX,

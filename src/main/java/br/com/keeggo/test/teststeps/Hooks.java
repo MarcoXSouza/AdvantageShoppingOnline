@@ -1,7 +1,7 @@
-package br.com.keeggo.teststeps;
+package br.com.keeggo.test.teststeps;
 
-import br.com.keeggo.managers.ConfigFileReader;
-import br.com.keeggo.utils.TestContext;
+import br.com.keeggo.core.managers.ConfigFileReader;
+import br.com.keeggo.core.utils.TestContext;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 

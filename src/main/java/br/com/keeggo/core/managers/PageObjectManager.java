@@ -1,11 +1,11 @@
-package br.com.keeggo.managers;
+package br.com.keeggo.core.managers;
 
 import org.openqa.selenium.WebDriver;
 
-import br.com.keeggo.Page.BuscaPage;
-import br.com.keeggo.Page.CadastroPage;
-import br.com.keeggo.Page.HomePage;
-import br.com.keeggo.Page.LupaPage;
+import br.com.keeggo.test.Page.BuscaPage;
+import br.com.keeggo.test.Page.CadastroPage;
+import br.com.keeggo.test.Page.HomePage;
+import br.com.keeggo.test.Page.LupaPage;
 
 public class PageObjectManager {
 

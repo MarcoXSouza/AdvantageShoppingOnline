@@ -1,11 +1,11 @@
-package br.com.keeggo.managers;
+package br.com.keeggo.core.managers;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Properties;
 
-import br.com.keeggo.enums.DriverType;
+import br.com.keeggo.core.enums.DriverType;
 
 public class ConfigFileReader {
 	private Properties properties;

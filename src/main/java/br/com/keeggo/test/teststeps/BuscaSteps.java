@@ -1,10 +1,10 @@
-package br.com.keeggo.teststeps;
+package br.com.keeggo.test.teststeps;
 
 import org.junit.Assert;
 
-import br.com.keeggo.Page.BuscaPage;
-import br.com.keeggo.Page.HomePage;
-import br.com.keeggo.utils.TestContext;
+import br.com.keeggo.core.utils.TestContext;
+import br.com.keeggo.test.Page.BuscaPage;
+import br.com.keeggo.test.Page.HomePage;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;

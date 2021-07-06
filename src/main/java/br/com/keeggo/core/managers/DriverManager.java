@@ -1,4 +1,4 @@
-package br.com.keeggo.managers;
+package br.com.keeggo.core.managers;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-import br.com.keeggo.enums.DriverType;
-import br.com.keeggo.utils.TestContext;
+import br.com.keeggo.core.enums.DriverType;
+import br.com.keeggo.core.utils.TestContext;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
